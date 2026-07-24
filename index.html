@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sophia Index — every Sophia course, counted</title>
+<meta name="description" content="The counts Sophia doesn't publish: exact challenges, touchstones, and milestones for all 82 courses, which ones require zero writing, how many schools accept each — plus community-reported hours. Free, no signup.">
+<link rel="canonical" href="https://sophiaindex.org/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sophia Index">
+<meta property="og:title" content="Every Sophia course, counted">
+<meta property="og:description" content="Exact challenge, touchstone, and milestone counts for all 82 Sophia courses. Which need zero writing. How many schools accept each. Community-reported hours. Free, no signup.">
+<meta property="og:url" content="https://sophiaindex.org/">
+<meta name="twitter:card" content="summary">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" defer></script>
+<style>
+:root{
+  --base:#191A1A; --panel:#202222; --panel2:#26292A; --border:#2D2F2F;
+  --text:#E8E8E6; --muted:#8D9191; --teal:#20B8CD; --teal-dim:#1A8D9D;
+  --amber:#D9A441; --radius:12px;
+  --mono:ui-monospace,"SF Mono","Cascadia Code","JetBrains Mono",Menlo,Consolas,monospace;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{color-scheme:dark}
+body{margin:0;background:var(--base);color:var(--text);font:15px/1.5 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--teal);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+header.site{position:sticky;top:0;z-index:20;background:rgba(25,26,26,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.hrow{display:flex;align-items:center;gap:16px;padding:12px 0;flex-wrap:wrap}
+.wordmark{font-weight:700;font-size:19px;letter-spacing:-.02em;color:var(--text)}
+.wordmark .dot{color:var(--teal)}
+.meta{font:12px var(--mono);color:var(--muted)}
+.meta b{color:var(--text);font-weight:600}
+.spacer{flex:1}
+nav.views{display:flex;gap:4px}
+nav.views button{background:none;border:1px solid transparent;color:var(--muted);font:600 13px var(--sans);padding:7px 14px;border-radius:999px;cursor:pointer}
+nav.views button.on{background:var(--panel);border-color:var(--border);color:var(--text)}
+nav.views button:hover{color:var(--text)}
+.ratecta{background:var(--teal);color:#06282d;font-weight:700;font-size:13px;padding:8px 14px;border-radius:999px;white-space:nowrap}
+.ratecta:hover{text-decoration:none;background:#3fc7da}
+
+.keystrip{display:flex;gap:18px;flex-wrap:wrap;align-items:center;padding:10px 0;border-top:1px solid var(--border);font-size:12.5px;color:var(--muted)}
+.keystrip .k{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.keystrip svg{flex:none}
+.keystrip b{color:var(--text);font-weight:600}
+
+.notice{margin:14px 0 0;padding:10px 14px;border:1px solid var(--amber);border-radius:var(--radius);color:var(--amber);font-size:13px;display:none}
+.notice.show{display:block}
+
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:18px 0 12px}
+.controls input[type=search],.controls select{background:var(--panel);border:1px solid var(--border);color:var(--text);font:14px var(--sans);padding:8px 12px;border-radius:999px}
+.controls input[type=search]{min-width:200px;flex:1;max-width:340px}
+.toggle{display:flex;align-items:center;gap:7px;font-size:13.5px;color:var(--muted);cursor:pointer;user-select:none;background:var(--panel);border:1px solid var(--border);padding:8px 12px;border-radius:999px}
+.toggle input{accent-color:var(--teal)}
+.toggle.on{color:var(--teal);border-color:var(--teal-dim)}
+.count{font:12px var(--mono);color:var(--muted);margin-left:auto}
+
+.card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:22px}
+.card h2{font-size:15px;margin:0;padding:13px 16px;border-bottom:1px solid var(--border);display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.card h2 .sub{font:12px var(--mono);color:var(--muted);font-weight:400}
+
+table{width:100%;border-collapse:collapse;font:13.5px var(--mono)}
+thead th{position:sticky;top:0;background:var(--panel2);color:var(--muted);font:600 11.5px var(--sans);text-transform:uppercase;letter-spacing:.05em;text-align:left;padding:9px 10px;border-bottom:1px solid var(--border);white-space:nowrap;cursor:pointer;user-select:none}
+thead th.num{text-align:right}
+thead th[aria-sort]:not([aria-sort=none])::after{content:" ↑";color:var(--teal)}
+thead th[aria-sort=descending]::after{content:" ↓";color:var(--teal)}
+tbody td{padding:9px 10px;border-bottom:1px solid var(--border);vertical-align:middle;white-space:nowrap}
+tbody tr:last-child td{border-bottom:none}
+tbody tr{cursor:pointer}
+tbody tr:hover td{background:var(--panel2)}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+td.name{white-space:normal;min-width:200px}
+td.name .cn{font:600 14px var(--sans);color:var(--text)}
+td.name .cc{font:11px var(--mono);color:var(--muted)}
+.zero{color:var(--teal);font-weight:700}
+.warn{color:var(--amber);font-weight:700}
+.pill{display:inline-block;font:600 10.5px var(--sans);letter-spacing:.04em;padding:2px 7px;border-radius:999px;border:1px solid var(--border);color:var(--muted);vertical-align:1px}
+.pill.kc{border-color:var(--teal-dim);color:var(--teal)}
+.pill.retired{border-color:var(--amber);color:var(--amber)}
+.hrs{color:var(--text)}
+.hrs.dim{color:var(--muted);font-style:italic}
+.ratelink{color:var(--teal);font:600 12px var(--sans)}
+.emptycell{color:var(--muted)}
+
+.labsnote{padding:10px 16px;font-size:13px;color:var(--muted);border-bottom:1px solid var(--border)}
+.labsnote b{color:var(--text)}
+
+/* tiers */
+.tierboard{padding:20px 16px 8px}
+.tierboard .tb-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.tierboard h3{margin:0;font-size:18px;letter-spacing:-.01em}
+.tier{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:13px 0;border-top:1px solid var(--border)}
+.tier .grade{font:800 26px var(--sans);letter-spacing:-.02em;line-height:1.1}
+.tier .grade small{display:block;font:600 10.5px var(--sans);color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
+.tier.s .grade{color:var(--teal)} .tier.d .grade{color:var(--amber)}
+.tier .chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:12.5px var(--mono);background:var(--panel2);border:1px solid var(--border);padding:4px 9px;border-radius:8px;color:var(--text);cursor:pointer}
+.chip:hover{border-color:var(--teal-dim)}
+.chip .cr{color:var(--muted)}
+.tb-foot{font:11.5px var(--mono);color:var(--muted);padding:14px 0 10px;border-top:1px solid var(--border);margin-top:6px}
+
+/* detail */
+dialog{background:var(--panel);color:var(--text);border:1px solid var(--border);border-radius:16px;max-width:520px;width:calc(100% - 32px);padding:0}
+dialog::backdrop{background:rgba(0,0,0,.55)}
+.d-head{padding:18px 20px 12px;border-bottom:1px solid var(--border)}
+.d-head h3{margin:0 0 3px;font-size:19px;letter-spacing:-.01em}
+.d-head .ids{font:12px var(--mono);color:var(--muted)}
+.d-body{padding:14px 20px 18px}
+.d-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;font:13.5px var(--mono)}
+.d-grid .lbl{color:var(--muted);font:12px var(--sans)}
+.d-note{margin-top:14px;font-size:13px;color:var(--muted)}
+.d-actions{display:flex;gap:10px;margin-top:16px;align-items:center}
+.d-actions .close{background:var(--panel2);border:1px solid var(--border);color:var(--text);padding:8px 14px;border-radius:999px;font:600 13px var(--sans);cursor:pointer}
+
+/* about */
+.prose{padding:22px;max-width:720px;font-size:14.5px}
+.prose h3{margin:22px 0 8px;font-size:16px}
+.prose h3:first-child{margin-top:0}
+.prose p{margin:0 0 12px;color:#c9cbc9}
+.prose code{font:12.5px var(--mono);background:var(--panel2);padding:1px 5px;border-radius:5px}
+
+footer.site{padding:26px 0 40px;color:var(--muted);font-size:12.5px;text-align:center}
+footer.site .sep{margin:0 8px;opacity:.5}
+
+/* mobile cards */
+@media (max-width:760px){
+  .hideM{display:none}
+  table,thead,tbody,tr,td{display:block}
+  thead{display:none}
+  tbody tr{border-bottom:1px solid var(--border);padding:11px 14px}
+  tbody td{border:none;padding:1px 0;white-space:normal}
+  td.num{text-align:left}
+  td[data-l]::before{content:attr(data-l) ": ";color:var(--muted);font:11px var(--sans)}
+  td.name::before{content:none}
+  .mrow{display:flex;gap:14px;flex-wrap:wrap;font:12.5px var(--mono);color:var(--muted);margin-top:3px}
+  .controls input[type=search]{max-width:none}
+  .tier{grid-template-columns:48px 1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="hrow">
+      <span class="wordmark">sophia<span class="dot">·</span>index</span>
+      <span class="meta">verified <b id="mVerified">—</b></span>
+      <span class="meta">community hours: <b id="mReported">0/82</b> courses reported</span>
+      <span class="spacer"></span>
+      <nav class="views" aria-label="Views">
+        <button id="tabTable" class="on">Courses</button>
+        <button id="tabTiers">Writing tiers</button>
+        <button id="tabAbout">About</button>
+      </nav>
+      <a class="ratecta" id="rateTop" href="#" target="_blank" rel="noopener">Report your hours</a>
+    </div>
+    <div class="keystrip" id="keystrip"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="notice" id="notice"></div>
+
+  <section id="viewTable">
+    <div class="controls">
+      <input type="search" id="q" placeholder="Search 82 courses…" aria-label="Search courses">
+      <select id="fCat" aria-label="Filter by category"><option value="">All categories</option></select>
+      <select id="fCr" aria-label="Filter by credits"><option value="">Any credits</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
+      <label class="toggle" id="tZero"><input type="checkbox" id="cbZero">No writing (0 touchstones)</label>
+      <span class="count" id="rowCount"></span>
+    </div>
+
+    <div class="card">
+      <h2>Courses <span class="sub" id="stdCount"></span></h2>
+      <div style="overflow-x:auto">
+      <table id="tblStd" aria-label="Standard Sophia courses">
+        <thead><tr>
+          <th data-k="course_name">Course</th>
+          <th data-k="credits" class="num">Cr</th>
+          <th data-k="units" class="num hideM">Units</th>
+          <th data-k="challenges" class="num">Challenges</th>
+          <th data-k="touchstones" class="num">Touchstones</th>
+          <th data-k="milestones" class="num">Milestones</th>
+          <th data-k="standalone_final" class="hideM">Final</th>
+          <th data-k="transfer_partners" class="num">Partners</th>
+          <th data-k="_hrs" class="num">Hours</th>
+          <th class="hideM"></th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Labs <span class="sub">different format — no exams</span></h2>
+      <div class="labsnote">All 5 labs are <b>1 credit, pass/fail, and have no milestones or final exam</b> — just lessons, activities, and 2 touchstones each. Each is a separate enrollment, designed to pair with its lecture course.</div>
+      <div style="overflow-x:auto">
+      <table id="tblLab" aria-label="Sophia lab courses">
+        <thead><tr>
+          <th data-k="course_name">Lab</th>
+          <th data-k="units" class="num hideM">Units</th>
+          <th data-k="lessons" class="num">Lessons</th>
+          <th data-k="activities" class="num">Activities</th>
+          <th data-k="touchstones" class="num">Touchstones</th>
+          <th data-k="transfer_partners" class="num">Partners</th>
+          <th data-k="_hrs" class="num">Hours</th>
+          <th class="hideM"></th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+      </div>
+    </div>
+    <p style="font-size:12.5px;color:var(--muted);margin:-8px 2px 24px">Partner count = schools with a credit-transfer agreement accepting that course. It is not a guarantee your school accepts it — always confirm with your registrar. <span class="warn">Amber</span> marks the bottom fifth (≤54 partners).</p>
+  </section>
+
+  <section id="viewTiers" hidden>
+    <div class="card tierboard" id="tierboard"></div>
+  </section>
+
+  <section id="viewAbout" hidden>
+    <div class="card"><div class="prose">
+      <h3>What this is</h3>
+      <p>The counts Sophia doesn't publish in one place: exact challenges, touchstones, and milestones for every course, pulled from course structures and the public catalog, kept current. Built because the Reddit difficulty lists go stale every few months.</p>
+      <h3>What the words mean</h3>
+      <p><b>Challenge</b> — a short multiple-choice quiz inside a unit. <b>Milestone</b> — a unit exam. <b>Touchstone</b> — a written or project assignment (the part you can't speed through). <b>Knowledge check</b> — short written responses, currently only in Environmental Science. Labs use <b>lessons</b> and <b>activities</b> instead, and have no exams.</p>
+      <h3>Where the hours come from</h3>
+      <p>You. Every hours figure is the <b>median</b> of community reports for that course, with <code>n</code> shown so you can judge it. Figures with fewer than 3 reports are shown faded. Report yours with the button above — it takes 30 seconds and is anonymous.</p>
+      <h3>Accuracy</h3>
+      <p>Counts describe the <b>current</b> version of each course as listed in Sophia's catalog. Sophia revises courses; if you enrolled a while ago your dashboard may differ. Assignment counts are structure, not effort — a course with 8 assignments can be slower than one with 20 if three of them are essays. That's what the hours column is for.</p>
+      <p>Data lives in a public sheet and updates on this page automatically. Last verified date is in the header. Spot an error? Report it through the same form.</p>
+    </div></div>
+  </section>
+</main>
+
+<dialog id="detail"></dialog>
+
+<footer class="site">
+  <div class="wrap">
+    sophiaindex.org<span class="sep">·</span>free, no signup, no ads<span class="sep">·</span>not affiliated with Sophia Learning
+  </div>
+</footer>
+
+<!-- Cloudflare Web Analytics snippet goes here -->
+
+<script>
+(function(){
+"use strict";
+var SHEET = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQWk2WkdOm6rwGEu85ROKxZ_hd6q8UJpKU-zvIht4X4m2jQeHs48BvSMkuu6pD3jeTeQkvErHSXImA1/pub?single=true&output=csv&gid=";
+var GIDS = ["1459099173","1842433762","170033960"];
+var FORM = "https://docs.google.com/forms/d/e/1FAIpQLSeCgZEcIdpkciqUYulAbGvjPtCQ7eZiilw6thPO6y2yecaghw/viewform";
+var PREFILL = FORM + "?usp=pp_url&entry.850100469=";
+var LOWQ = 54; // bottom-quintile partner warning threshold
+
+var S = {courses:[],labs:[],ratings:{},sortK:"course_name",sortDir:1,labSortK:"course_name",labSortDir:1,cached:null};
+
+document.getElementById("rateTop").href = FORM;
+
+/* ---------- icons (original SVGs in Sophia's visual language) ---------- */
+function icon(t,c,sz){
+  sz=sz||13; c=c||"currentColor";
+  var o='<svg width="'+sz+'" height="'+sz+'" viewBox="0 0 16 16" aria-hidden="true">';
+  if(t==="challenge") return o+'<circle cx="8" cy="8" r="5.5" fill="'+c+'"/></svg>';
+  if(t==="touchstone") return o+'<path d="M8 1.5 13.5 4v4.2c0 3.4-2.3 5.6-5.5 6.8C4.8 13.8 2.5 11.6 2.5 8.2V4L8 1.5z" fill="'+c+'"/></svg>';
+  if(t==="milestone") return o+'<path d="M3.5 1.5h9V14.5L8 11 3.5 14.5V1.5z" fill="'+c+'"/></svg>';
+  if(t==="lesson") return o+'<rect x="3" y="3" width="10" height="10" rx="1.5" fill="'+c+'"/></svg>';
+  if(t==="activity") return o+'<path d="M8 2.5 14 13.5H2L8 2.5z" fill="'+c+'"/></svg>';
+  if(t==="kc") return o+'<path d="M8 1.5 14.5 8 8 14.5 1.5 8 8 1.5z" fill="'+c+'"/></svg>';
+  return o+"</svg>";
+}
+(function(){
+  var defs=[["challenge","Challenge","short multiple-choice quiz"],
+            ["milestone","Milestone","unit exam"],
+            ["touchstone","Touchstone","written / project work"],
+            ["kc","Knowledge check","short written responses"],
+            ["lesson","Lesson","lab content"],
+            ["activity","Activity","lab exercise, no exams"]];
+  document.getElementById("keystrip").innerHTML = defs.map(function(d){
+    return '<span class="k">'+icon(d[0],"var(--muted)")+'<b>'+d[1]+'</b> — '+d[2]+'</span>';
+  }).join("");
+})();
+
+/* ---------- data loading ---------- */
+function fetchCsv(url){
+  return fetch(url,{cache:"no-store"}).then(function(r){
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    return r.text();
+  }).then(function(t){
+    var p = Papa.parse(t.trim(),{header:true,skipEmptyLines:true});
+    if(!p.data.length) throw new Error("empty");
+    return p.data;
+  });
+}
+function classify(rowsets){
+  var out={courses:null,labs:null,ratings:null};
+  rowsets.forEach(function(rows){
+    if(!rows) return;
+    var h=Object.keys(rows[0]||{});
+    if(h.indexOf("challenges")>=0) out.courses=rows;
+    else if(h.indexOf("lessons")>=0) out.labs=rows;
+    else if(h.indexOf("median_hours")>=0) out.ratings=rows;
+  });
+  return out;
+}
+function applyData(courses,labs,ratings){
+  S.courses = courses.filter(function(r){return r.course_code;});
+  S.labs = labs.filter(function(r){return r.course_code;});
+  S.ratings = {};
+  (ratings||[]).forEach(function(r){
+    if(!r.course_name) return;
+    S.ratings[r.course_name.trim()] = {h:parseFloat(r.median_hours), d:parseFloat(r.median_difficulty), n:parseInt(r.n,10)||0};
+  });
+  var dates = S.courses.concat(S.labs).map(function(r){return r.last_verified;}).filter(Boolean).sort();
+  document.getElementById("mVerified").textContent = dates[dates.length-1]||"—";
+  var total=S.courses.length+S.labs.length, rep=0;
+  S.courses.concat(S.labs).forEach(function(r){var g=S.ratings[r.course_name]; if(g&&g.n>0) rep++;});
+  document.getElementById("mReported").textContent = rep+"/"+total;
+  buildCatFilter(); render(); renderTiers();
+}
+function load(){
+  Promise.all(GIDS.map(function(g){return fetchCsv(SHEET+g).catch(function(){return null;});}))
+  .then(function(sets){
+    var c=classify(sets);
+    if(c.courses && c.labs){ applyData(c.courses,c.labs,c.ratings||[]); }
+    else { throw new Error("schema"); }
+  })
+  .catch(function(){
+    fetch("data/snapshot.json").then(function(r){return r.json();}).then(function(s){
+      applyData(s.courses,s.labs,s.ratings||[]);
+      var n=document.getElementById("notice");
+      n.textContent="Live data is unreachable right now — showing cached data from "+s.generated+".";
+      n.classList.add("show");
+    }).catch(function(){
+      var n=document.getElementById("notice");
+      n.textContent="Couldn't load course data. Refresh to retry.";
+      n.classList.add("show");
+    });
+  });
+}
+
+/* ---------- helpers ---------- */
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+function num(v){var n=parseFloat(v);return isNaN(n)?-1:n;}
+function ratingOf(name){return S.ratings[name]||null;}
+function hoursCell(name){
+  var g=ratingOf(name);
+  if(g&&g.n>0&&!isNaN(g.h)){
+    var cls = g.n<3?"hrs dim":"hrs";
+    return '<span class="'+cls+'">'+g.h+'h <span style="color:var(--muted)">(n='+g.n+')</span></span>';
+  }
+  return '<a class="ratelink" href="'+PREFILL+encodeURIComponent(name)+'" target="_blank" rel="noopener" onclick="event.stopPropagation()">— rate</a>';
+}
+function partnersCell(v){
+  var n=num(v);
+  if(n<0) return '<span class="emptycell">unverified</span>';
+  return n<=LOWQ ? '<span class="warn">'+n+' ⚠</span>' : String(n);
+}
+
+/* ---------- table rendering ---------- */
+function buildCatFilter(){
+  var sel=document.getElementById("fCat");
+  var cats={}; S.courses.forEach(function(r){cats[r.category]=1;});
+  Object.keys(cats).sort().forEach(function(c){
+    var o=document.createElement("option"); o.textContent=c; sel.appendChild(o);
+  });
+}
+function filtered(){
+  var q=document.getElementById("q").value.trim().toLowerCase();
+  var cat=document.getElementById("fCat").value;
+  var cr=document.getElementById("fCr").value;
+  var z=document.getElementById("cbZero").checked;
+  return S.courses.filter(function(r){
+    if(cat && r.category!==cat) return false;
+    if(cr && String(r.credits)!==cr) return false;
+    if(z && num(r.touchstones)!==0) return false;
+    if(q && (r.course_name+" "+r.course_code).toLowerCase().indexOf(q)<0) return false;
+    return true;
+  });
+}
+function sortRows(rows,k,dir){
+  return rows.slice().sort(function(a,b){
+    var av,bv;
+    if(k==="_hrs"){
+      var ga=ratingOf(a.course_name),gb=ratingOf(b.course_name);
+      av=ga&&ga.n>0?ga.h:-1; bv=gb&&gb.n>0?gb.h:-1;
+    } else if(k==="course_name"||k==="standalone_final"){
+      av=String(a[k]||"").toLowerCase(); bv=String(b[k]||"").toLowerCase();
+      return av<bv?-dir:av>bv?dir:0;
+    } else { av=num(a[k]); bv=num(b[k]); }
+    return (av-bv)*dir;
+  });
+}
+function render(){
+  var rows=sortRows(filtered(),S.sortK,S.sortDir);
+  var tb=document.querySelector("#tblStd tbody");
+  tb.innerHTML=rows.map(function(r){
+    var ts=num(r.touchstones), kc=num(r.knowledge_checks);
+    var tsHtml = ts===0 ? '<span class="zero">0</span>' : String(ts);
+    if(kc>0) tsHtml += ' <span class="pill kc">+'+kc+' KC</span>';
+    var ret = (r.retired==="Y") ? ' <span class="pill retired">RETIRED</span>' : '';
+    return '<tr data-id="'+esc(r.ace_id)+'" tabindex="0">'+
+      '<td class="name"><span class="cn">'+esc(r.course_name)+ret+'</span><br><span class="cc">'+esc(r.course_code)+' · '+esc(r.category)+'</span></td>'+
+      '<td class="num" data-l="Credits">'+esc(r.credits)+'</td>'+
+      '<td class="num hideM" data-l="Units">'+esc(r.units)+'</td>'+
+      '<td class="num" data-l="Challenges">'+esc(r.challenges)+'</td>'+
+      '<td class="num" data-l="Touchstones">'+tsHtml+'</td>'+
+      '<td class="num" data-l="Milestones">'+esc(r.milestones)+'</td>'+
+      '<td class="hideM" data-l="Separate final">'+esc(r.standalone_final)+'</td>'+
+      '<td class="num" data-l="Partners">'+partnersCell(r.transfer_partners)+'</td>'+
+      '<td class="num" data-l="Hours">'+hoursCell(r.course_name)+'</td>'+
+      '<td class="hideM"><a class="ratelink" href="'+PREFILL+encodeURIComponent(r.course_name)+'" target="_blank" rel="noopener" onclick="event.stopPropagation()">rate</a></td>'+
+    '</tr>';
+  }).join("");
+  document.getElementById("rowCount").textContent=rows.length+" of "+S.courses.length+" courses";
+  document.getElementById("stdCount").textContent=S.courses.length+" standard courses";
+  renderLabs();
+  syncSortHeads(document.querySelectorAll("#tblStd thead th"),S.sortK,S.sortDir);
+}
+function renderLabs(){
+  var rows=sortRows(S.labs,S.labSortK,S.labSortDir);
+  document.querySelector("#tblLab tbody").innerHTML=rows.map(function(r){
+    return '<tr data-id="'+esc(r.ace_id)+'" tabindex="0">'+
+      '<td class="name"><span class="cn">'+esc(r.course_name)+'</span><br><span class="cc">'+esc(r.course_code)+' · 1 cr · pass/fail</span></td>'+
+      '<td class="num hideM" data-l="Units">'+esc(r.units)+'</td>'+
+      '<td class="num" data-l="Lessons">'+esc(r.lessons)+'</td>'+
+      '<td class="num" data-l="Activities">'+esc(r.activities)+'</td>'+
+      '<td class="num" data-l="Touchstones">'+esc(r.touchstones)+'</td>'+
+      '<td class="num" data-l="Partners">'+partnersCell(r.transfer_partners)+'</td>'+
+      '<td class="num" data-l="Hours">'+hoursCell(r.course_name)+'</td>'+
+      '<td class="hideM"><a class="ratelink" href="'+PREFILL+encodeURIComponent(r.course_name)+'" target="_blank" rel="noopener" onclick="event.stopPropagation()">rate</a></td>'+
+    '</tr>';
+  }).join("");
+  syncSortHeads(document.querySelectorAll("#tblLab thead th"),S.labSortK,S.labSortDir);
+}
+function syncSortHeads(ths,k,dir){
+  ths.forEach(function(th){
+    if(!th.dataset.k){th.removeAttribute("aria-sort");return;}
+    th.setAttribute("aria-sort", th.dataset.k===k ? (dir===1?"ascending":"descending") : "none");
+  });
+}
+
+/* ---------- detail dialog ---------- */
+function findById(id){
+  return S.courses.find(function(r){return r.ace_id===id;}) || S.labs.find(function(r){return r.ace_id===id;});
+}
+function isLab(r){return r.lessons!==undefined && r.lessons!=="";}
+function openDetail(id){
+  var r=findById(id); if(!r) return;
+  var g=ratingOf(r.course_name);
+  var rows;
+  if(isLab(r)){
+    rows=[["Format","Lab — pass/fail, no exams"],["Units",r.units],["Lessons",r.lessons],["Activities",r.activities],["Touchstones",r.touchstones],["Transfer partners",num(r.transfer_partners)<0?"unverified":r.transfer_partners]];
+  } else {
+    rows=[["Credits",r.credits],["Category",r.category],["Units",r.units],["Challenges",r.challenges],["Touchstones",r.touchstones],["Knowledge checks",r.knowledge_checks||"0"],["Milestones (incl. final)",r.milestones],["Separate final",r.standalone_final],["Pass threshold",r.pass_threshold+"%"],["Transfer partners",num(r.transfer_partners)<0?"unverified":r.transfer_partners]];
+  }
+  rows.push(["Community hours", g&&g.n>0 ? g.h+"h median (n="+g.n+")" : "no reports yet"]);
+  if(g&&g.n>0&&!isNaN(g.d)) rows.push(["Community difficulty", g.d+" / 5"]);
+  var d=document.getElementById("detail");
+  d.innerHTML='<div class="d-head"><h3>'+esc(r.course_name)+'</h3><div class="ids">'+esc(r.course_code)+' · '+esc(r.ace_id)+' · verified '+esc(r.last_verified)+'</div></div>'+
+  '<div class="d-body"><div class="d-grid">'+rows.map(function(x){return '<span class="lbl">'+esc(x[0])+'</span><span>'+esc(x[1])+'</span>';}).join("")+'</div>'+
+  (isLab(r)?'<p class="d-note">Labs are separate 1-credit enrollments designed to pair with the lecture course.</p>':'')+
+  '<div class="d-actions"><a class="ratecta" href="'+PREFILL+encodeURIComponent(r.course_name)+'" target="_blank" rel="noopener">Report your hours</a><button class="close" onclick="document.getElementById(\'detail\').close()">Close</button></div></div>';
+  d.showModal();
+}
+document.addEventListener("click",function(e){
+  var tr=e.target.closest("tr[data-id]");
+  if(tr) openDetail(tr.dataset.id);
+});
+document.addEventListener("keydown",function(e){
+  if(e.key==="Enter"){var tr=e.target.closest&&e.target.closest("tr[data-id]"); if(tr) openDetail(tr.dataset.id);}
+});
+document.getElementById("detail").addEventListener("click",function(e){
+  if(e.target===this) this.close();
+});
+
+/* ---------- tiers ---------- */
+function renderTiers(){
+  var live=S.courses.filter(function(r){return r.retired!=="Y";});
+  var bands=[
+    {g:"S",label:"zero writing",cls:"s",test:function(t){return t===0;}},
+    {g:"A",label:"one touchstone",cls:"a",test:function(t){return t===1;}},
+    {g:"B",label:"two",cls:"b",test:function(t){return t===2;}},
+    {g:"C",label:"three – four",cls:"c",test:function(t){return t===3||t===4;}},
+    {g:"D",label:"five or more",cls:"d",test:function(t){return t>=5;}}
+  ];
+  var v=document.getElementById("mVerified").textContent;
+  var html='<div class="tb-head"><h3>Writing load — all '+live.length+' standard courses by touchstone count</h3>'+
+    '<span class="meta">labs (2 touchstones each) listed separately on the Courses view</span></div>';
+  bands.forEach(function(b){
+    var rows=live.filter(function(r){return b.test(num(r.touchstones));})
+                 .sort(function(a,c){return num(a.challenges)-num(c.challenges);});
+    html+='<div class="tier '+b.cls+'"><div class="grade">'+b.g+'<small>'+b.label+' ('+rows.length+')</small></div><div class="chips">'+
+      rows.map(function(r){return '<span class="chip" data-id="'+esc(r.ace_id)+'" tabindex="0">'+esc(r.course_name)+' <span class="cr">'+esc(r.credits)+'cr</span></span>';}).join("")+
+      '</div></div>';
+  });
+  html+='<div class="tb-foot">sophiaindex.org · verified '+esc(v)+' · touchstones = written/project assignments · counts are structure, not effort — hours come from community reports</div>';
+  var el=document.getElementById("tierboard");
+  el.innerHTML=html;
+  el.querySelectorAll(".chip").forEach(function(ch){
+    ch.addEventListener("click",function(){openDetail(ch.dataset.id);});
+    ch.addEventListener("keydown",function(e){if(e.key==="Enter")openDetail(ch.dataset.id);});
+  });
+}
+
+/* ---------- view switching & controls ---------- */
+var tabs={tabTable:"viewTable",tabTiers:"viewTiers",tabAbout:"viewAbout"};
+Object.keys(tabs).forEach(function(id){
+  document.getElementById(id).addEventListener("click",function(){
+    Object.keys(tabs).forEach(function(t){
+      document.getElementById(t).classList.toggle("on",t===id);
+      document.getElementById(tabs[t]).hidden = (t!==id);
+    });
+  });
+});
+["q","fCat","fCr"].forEach(function(id){
+  document.getElementById(id).addEventListener("input",render);
+});
+document.getElementById("cbZero").addEventListener("change",function(){
+  document.getElementById("tZero").classList.toggle("on",this.checked); render();
+});
+document.querySelectorAll("#tblStd thead th").forEach(function(th){
+  th.addEventListener("click",function(){
+    if(!th.dataset.k) return;
+    if(S.sortK===th.dataset.k) S.sortDir*=-1; else {S.sortK=th.dataset.k;S.sortDir=1;}
+    render();
+  });
+});
+document.querySelectorAll("#tblLab thead th").forEach(function(th){
+  th.addEventListener("click",function(){
+    if(!th.dataset.k) return;
+    if(S.labSortK===th.dataset.k) S.labSortDir*=-1; else {S.labSortK=th.dataset.k;S.labSortDir=1;}
+    renderLabs();
+  });
+});
+
+/* boot: wait for PapaParse (deferred), but never hang if the CDN fails */
+var booted=false;
+function boot(){ if(booted) return; booted=true; load(); }
+if(window.Papa) boot();
+else {
+  var sc=document.querySelector('script[src*="papaparse"]');
+  sc.addEventListener("load",boot);
+  sc.addEventListener("error",boot);   /* Papa missing -> fetchCsv throws -> snapshot fallback */
+  setTimeout(boot,4000);
+}
+})();
+</script>
+</body>
+</html>
