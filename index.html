@@ -44,10 +44,15 @@ nav.views button:hover{color:var(--text)}
 .ratecta{background:var(--teal);color:#06282d;font-weight:700;font-size:13px;padding:8px 14px;border-radius:999px;white-space:nowrap}
 .ratecta:hover{text-decoration:none;background:#3fc7da}
 
-.keystrip{display:flex;gap:18px;flex-wrap:wrap;align-items:center;padding:10px 0;border-top:1px solid var(--border);font-size:12.5px;color:var(--muted)}
-.keystrip .k{display:flex;align-items:center;gap:6px;white-space:nowrap}
-.keystrip svg{flex:none}
-.keystrip b{color:var(--text);font-weight:600}
+.keycard{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin:18px 0 0}
+.keycard h2{margin:0 0 12px;font-size:16px;letter-spacing:-.01em}
+.keygrid{display:grid;grid-template-columns:1fr 1fr;gap:10px 28px;font-size:13.5px;color:var(--muted)}
+.keygrid .k{display:flex;align-items:center;gap:10px}
+.keygrid svg{flex:none}
+.keygrid b{color:var(--text);font-weight:600}
+.keyscale{margin:12px 0 0;padding-top:11px;border-top:1px solid var(--border);font-size:12.5px;color:var(--muted)}
+.keyscale b{color:var(--text)}
+@media (max-width:560px){.keygrid{grid-template-columns:1fr}}
 
 .notice{margin:14px 0 0;padding:10px 14px;border:1px solid var(--amber);border-radius:var(--radius);color:var(--amber);font-size:13px;display:none}
 .notice.show{display:block}
@@ -159,7 +164,6 @@ footer.site .sep{margin:0 8px;opacity:.5}
       </nav>
       <a class="ratecta" id="rateTop" href="#" target="_blank" rel="noopener">Report your hours</a>
     </div>
-    <div class="keystrip" id="keystrip"></div>
   </div>
 </header>
 
@@ -167,6 +171,11 @@ footer.site .sep{margin:0 8px;opacity:.5}
   <div class="notice" id="notice"></div>
 
   <section id="viewTable">
+    <div class="keycard">
+      <h2>Assessment types</h2>
+      <div class="keygrid" id="keystrip"></div>
+      <div class="keyscale"><b>Hours</b> = community median · <b>Difficulty</b> = community median on a 1–5 scale, where <b>1 = easiest</b> and <b>5 = hardest</b> · <code style="font-family:var(--mono)">n</code> = number of reports (faded until n ≥ 3)</div>
+    </div>
     <div class="controls">
       <input type="search" id="q" placeholder="Search 82 courses…" aria-label="Search courses">
       <select id="fCat" aria-label="Filter by category"><option value="">All categories</option></select>
@@ -188,7 +197,7 @@ footer.site .sep{margin:0 8px;opacity:.5}
           <th data-k="milestones" class="num">Milestones</th>
           <th data-k="standalone_final" class="hideM">Final</th>
           <th data-k="transfer_partners" class="num">Partners</th>
-          <th data-k="_hrs" class="num">Hours</th>
+          <th data-k="_hrs" class="num" title="community median hours · difficulty (1 = easiest, 5 = hardest)">Hours · Diff</th>
           <th class="hideM"></th>
         </tr></thead>
         <tbody></tbody>
@@ -208,7 +217,7 @@ footer.site .sep{margin:0 8px;opacity:.5}
           <th data-k="activities" class="num">Activities</th>
           <th data-k="touchstones" class="num">Touchstones</th>
           <th data-k="transfer_partners" class="num">Partners</th>
-          <th data-k="_hrs" class="num">Hours</th>
+          <th data-k="_hrs" class="num" title="community median hours · difficulty (1 = easiest, 5 = hardest)">Hours · Diff</th>
           <th class="hideM"></th>
         </tr></thead>
         <tbody></tbody>
@@ -280,7 +289,7 @@ function icon(t,c,sz){
             ["lesson","Lesson","lab content"],
             ["activity","Activity","lab exercise, no exams"]];
   document.getElementById("keystrip").innerHTML = defs.map(function(d){
-    return '<span class="k">'+icon(d[0],"var(--muted)")+'<b>'+d[1]+'</b> — '+d[2]+'</span>';
+    return '<span class="k">'+icon(d[0],"var(--teal)",18)+'<span><b>'+d[1]+'</b> — '+d[2]+'</span></span>';
   }).join("");
 })();
 
@@ -350,7 +359,8 @@ function hoursCell(name){
   var g=ratingOf(name);
   if(g&&g.n>0&&!isNaN(g.h)){
     var cls = g.n<3?"hrs dim":"hrs";
-    return '<span class="'+cls+'">'+g.h+'h <span style="color:var(--muted)">(n='+g.n+')</span></span>';
+    var diff = (!isNaN(g.d)&&g.d>0) ? ' · <span title="community difficulty, 1 = easiest, 5 = hardest">'+g.d+'/5</span>' : '';
+    return '<span class="'+cls+'">'+g.h+'h'+diff+' <span style="color:var(--muted)">(n='+g.n+')</span></span>';
   }
   return '<a class="ratelink" href="'+PREFILL+encodeURIComponent(name)+'" target="_blank" rel="noopener" onclick="event.stopPropagation()">— rate</a>';
 }
@@ -458,7 +468,7 @@ function openDetail(id){
     rows=[["Credits",r.credits],["Category",r.category],["Units",r.units],["Challenges",r.challenges],["Touchstones",r.touchstones],["Knowledge checks",r.knowledge_checks||"0"],["Milestones (incl. final)",r.milestones],["Separate final",r.standalone_final],["Pass threshold",r.pass_threshold+"%"],["Transfer partners",num(r.transfer_partners)<0?"unverified":r.transfer_partners]];
   }
   rows.push(["Community hours", g&&g.n>0 ? g.h+"h median (n="+g.n+")" : "no reports yet"]);
-  if(g&&g.n>0&&!isNaN(g.d)) rows.push(["Community difficulty", g.d+" / 5"]);
+  if(g&&g.n>0&&!isNaN(g.d)) rows.push(["Community difficulty", g.d+" / 5  (1 = easiest, 5 = hardest)"]);
   var d=document.getElementById("detail");
   d.innerHTML='<div class="d-head"><h3>'+esc(r.course_name)+'</h3><div class="ids">'+esc(r.course_code)+' · '+esc(r.ace_id)+' · verified '+esc(r.last_verified)+'</div></div>'+
   '<div class="d-body"><div class="d-grid">'+rows.map(function(x){return '<span class="lbl">'+esc(x[0])+'</span><span>'+esc(x[1])+'</span>';}).join("")+'</div>'+
