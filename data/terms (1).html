@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Use — Unofficial Sophia Learning Course Reference | SophiaIndex</title>
+<meta name="description" content="Terms of use for SophiaIndex, an independent, non-commercial reference for Sophia Learning course structure and workload. Not affiliated with Sophia Learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --base:   #191A1A;
+    --panel:  #202222;
+    --border: #2D2F2F;
+    --paper:  #E8E8E6;
+    --muted:  #8D9191;
+    --teal:   #20B8CD;
+    --amber:  #D9A441;
+    --display: "Space Grotesk", system-ui, sans-serif;
+    --body: "Inter", system-ui, sans-serif;
+    --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--base);
+    color: var(--paper);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--teal); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 2px; }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  header {
+    border-bottom: 1px solid var(--border);
+    background: var(--panel);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .head-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 24px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .wordmark {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: -0.01em;
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .wordmark:hover { text-decoration: none; }
+  .tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 2px 9px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .back {
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .back:hover { color: var(--teal); }
+
+  /* Title block */
+  .title-block { padding: 56px 0 32px; border-bottom: 1px solid var(--border); }
+  h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(28px, 6vw, 40px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+  }
+  .effective {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .lede { color: var(--muted); font-size: 16px; margin: 18px 0 0; max-width: 60ch; }
+
+  /* Sections */
+  main { padding: 8px 0 40px; }
+  section { padding: 34px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+
+  h2 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    margin: 0 0 14px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .num {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--teal);
+    font-weight: 400;
+  }
+  p { margin: 0 0 14px; }
+  p:last-child { margin-bottom: 0; }
+  strong { color: var(--paper); font-weight: 600; }
+
+  /* Callout for the core disclaimer */
+  .callout {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--amber);
+    border-radius: 8px;
+    padding: 20px 22px;
+    margin: 4px 0 0;
+  }
+  .callout p { color: var(--paper); }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--border);
+    background: var(--panel);
+    padding: 32px 0 40px;
+  }
+  .foot-inner { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .foot-disc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 68ch;
+  }
+  .foot-disc strong { color: var(--paper); }
+  .foot-meta {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head-inner">
+    <a class="wordmark" href="index.html">
+      SophiaIndex <span class="tag">Unofficial</span>
+    </a>
+    <a class="back" href="index.html">&larr; Back to index</a>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="title-block">
+    <h1>Terms of Use</h1>
+    <div class="effective">Effective: 2026-07-24 &nbsp;·&nbsp; Last updated: 2026-07-24</div>
+    <p class="lede">Please read these terms before using SophiaIndex. By using this site, you agree to them. If you don't agree, please don't use the site.</p>
+  </div>
+
+  <main>
+
+    <section>
+      <h2><span class="num">01</span> About this site</h2>
+      <p>SophiaIndex is an independent, non-commercial reference for Sophia Learning course structure and workload, maintained by students. Course structure data is drawn from Sophia's public catalog and from students' own dashboards; workload figures come from community submissions and are shown as medians alongside the number of reports behind them. The site is free. There is nothing to buy and no account to create.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">02</span> Not affiliated with Sophia Learning</h2>
+      <div class="callout">
+        <p>SophiaIndex is an unofficial, independent project. It is <strong>not affiliated with, endorsed by, or sponsored by</strong> Sophia Learning, LLC or its parent company, Strategic Education, Inc. SOPHIA&reg; is a registered trademark of Sophia Learning, LLC; the name is used here only to identify and refer to their courses, and no claim is made to any rights in the mark. For official course information, requirements, and enrollment, visit <a href="https://www.sophia.org" rel="noopener">sophia.org</a>.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">03</span> No warranty; accuracy of information</h2>
+      <p>The information on this site is provided <strong>"as is"</strong> and <strong>"as available,"</strong> for general reference only, with no warranty of any kind — express or implied — including accuracy, completeness, reliability, or fitness for any particular purpose.</p>
+      <p>Course structures, requirements, credit values, and transfer policies change over time. Community-submitted workload figures are estimates drawn from other users, not official data, and may be incomplete, out of date, or wrong. Nothing on this site should be treated as authoritative.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">04</span> Not official advice</h2>
+      <p>Nothing on SophiaIndex is official academic, enrollment, financial, or transfer-credit advice. Decisions about your education — <strong>especially transfer credit and degree requirements</strong> — should be verified directly with Sophia Learning and with your receiving institution before you act on them. This site is a starting point for planning, not a substitute for official sources.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">05</span> Use at your own risk; limitation of liability</h2>
+      <p>Your use of this site is <strong>at your own risk</strong>. To the fullest extent permitted by law, the maintainers of SophiaIndex are not liable for any loss, damage, or consequence arising from your use of, or reliance on, anything on this site — including decisions made about coursework, schedules, transfer credit, or enrollment. If you rely on information here, you do so entirely at your own discretion and risk.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">06</span> Community submissions</h2>
+      <p>Workload and difficulty figures are submitted by users. Submissions may be aggregated, edited, filtered, or removed at any time, for any reason, without notice. Do not submit anything false, abusive, or that isn't yours to share. Submissions are provided voluntarily and without expectation of compensation or attribution.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">07</span> Changes to data and to these terms</h2>
+      <p>The data, features, and content on this site may be updated, changed, or removed at any time without notice. These Terms of Use may also be updated at any time; the "Last updated" date above reflects the current version. Continued use of the site after a change means you accept the updated terms.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">08</span> External links</h2>
+      <p>This site may link to external sites, including sophia.org, for your convenience. SophiaIndex does not control and is not responsible for the content, policies, or accuracy of any external site.</p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <p class="foot-disc">
+      <strong>SophiaIndex</strong> is an independent, non-commercial reference maintained by students. It is not affiliated with, endorsed by, or sponsored by Sophia Learning, LLC or its parent Strategic Education, Inc. SOPHIA&reg; is a registered trademark of Sophia Learning, LLC; it is used here only to identify and refer to their courses, and no claim is made to any rights in the mark. For official course information and enrollment, visit <a href="https://www.sophia.org" rel="noopener">sophia.org</a>.
+    </p>
+    <div class="foot-meta">
+      <span>Independent</span>
+      <span>·</span>
+      <span>Community-run</span>
+      <span>·</span>
+      <span>Not affiliated with Sophia Learning</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
