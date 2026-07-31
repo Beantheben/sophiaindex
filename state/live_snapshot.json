@@ -1,0 +1,1416 @@
+{
+ "business-communication": {
+  "url": "https://www.sophia.org/online-courses/business/business-communication/",
+  "name": "Business Communication",
+  "counts": {
+   "challenges": 13,
+   "milestones": 4,
+   "touchstones": 4
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 83
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 13 Challenges (formative assessments), 4 Milestones (summative assessments), and 4 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "business-data-analytics": {
+  "url": "https://www.sophia.org/online-courses/business/business-data-analytics/",
+  "name": "Business Data Analytics",
+  "counts": {
+   "challenges": 15,
+   "milestones": 6,
+   "touchstones": 2
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 46
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 15 Challenges (formative assessments), 6 Milestones (summative assessments), and 2 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "business-ethics": {
+  "url": "https://www.sophia.org/online-courses/business/business-ethics/",
+  "name": "Business Ethics",
+  "counts": {
+   "challenges": 12,
+   "milestones": 5,
+   "touchstones": 2
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 72
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 12 Challenges (formative assessments), 5 Milestones (summative assessments), and 2 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "business-law": {
+  "url": "https://www.sophia.org/online-courses/business/business-law/",
+  "name": "Business Law",
+  "counts": {
+   "challenges": 11,
+   "milestones": 4,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 81
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 11 Challenges (formative assessments), 4 Milestones (summative assessments), and 1 Touchstone (project-based or written assessment) with an overall score of 70% or better."
+ },
+ "financial-accounting": {
+  "url": "https://www.sophia.org/online-courses/business/financial-accounting/",
+  "name": "Financial Accounting",
+  "counts": {
+   "challenges": 9,
+   "milestones": 5,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 86
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 9 Challenges (formative assessments) and 5 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "healthcare-management": {
+  "url": "https://www.sophia.org/online-courses/business/healthcare-management/",
+  "name": "Healthcare Management",
+  "counts": {
+   "challenges": 18,
+   "milestones": 4,
+   "touchstones": 3
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 46
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 18 Challenges (formative assessments), 4 Milestones (summative assessments), and 3 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "human-resource-management": {
+  "url": "https://www.sophia.org/online-courses/business/human-resource-management/",
+  "name": "Human Resource Management",
+  "counts": {
+   "challenges": 16,
+   "milestones": 4,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 58
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 16 Challenges (formative assessments), 4 Milestones (summative assessments), and 1 Touchstone (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "introduction-to-business": {
+  "url": "https://www.sophia.org/online-courses/business/introduction-to-business/",
+  "name": "Introduction to Business",
+  "counts": {
+   "challenges": 12,
+   "milestones": 5,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 88
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 12 Challenges (formative assessments), 5 Milestones (summative assessments), and 1 Touchstone (project-based or written assessment) with an overall score of 70% or better."
+ },
+ "managerial-accounting": {
+  "url": "https://www.sophia.org/online-courses/business/managerial-accounting/",
+  "name": "Managerial Accounting",
+  "counts": {
+   "challenges": 14,
+   "milestones": 5,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 72
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 14 Challenges (formative assessments) and 5 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "operations-management": {
+  "url": "https://www.sophia.org/online-courses/business/operations-management/",
+  "name": "Operations Management",
+  "counts": {
+   "challenges": 12,
+   "milestones": 4,
+   "touchstones": 4
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 59
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 12 Challenges (formative assessments), 4 Milestones (summative assessments), and 4 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "organizational-behavior": {
+  "url": "https://www.sophia.org/online-courses/business/organizational-behavior/",
+  "name": "Organizational Behavior",
+  "counts": {
+   "challenges": 16,
+   "milestones": 4,
+   "touchstones": 3
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 60
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 16 Challenges (formative assessments), 4 Milestones (summative assessments), and 3 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "personal-finance": {
+  "url": "https://www.sophia.org/online-courses/business/personal-finance/",
+  "name": "Personal Finance",
+  "counts": {
+   "challenges": 19,
+   "milestones": 5,
+   "touchstone_tasks": 1,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 75
+  },
+  "confident": true,
+  "ambiguous_fields": [
+   "touchstones"
+  ],
+  "schema": "standard",
+  "evidence": " You must complete 19 Challenges (formative assessments), 5 Milestones (summative assessments), and 1 Touchstone Task and 1 Touchstone (project-based or written assessments) with an overall score of 7"
+ },
+ "principles-of-finance": {
+  "url": "https://www.sophia.org/online-courses/business/principles-of-finance/",
+  "name": "Principles of Finance",
+  "counts": {
+   "challenges": 15,
+   "milestones": 5,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 84
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 15 Challenges (formative assessments) and 5 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "principles-of-leadership": {
+  "url": "https://www.sophia.org/online-courses/business/principles-of-leadership/",
+  "name": "Principles of Leadership",
+  "counts": {
+   "challenges": 19,
+   "milestones": 4,
+   "touchstones": 3
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 17
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 19 Challenges (formative assessments), 4 Milestones (summative assessments), and 3 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "principles-of-management": {
+  "url": "https://www.sophia.org/online-courses/business/principles-of-management/",
+  "name": "Principles of Management",
+  "counts": {
+   "challenges": 16,
+   "milestones": 4,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 84
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 16 Challenges (formative assessments), 4 Milestones (summative assessments), and 1 Touchstone (project-based or written assessment) with an overall score of 70% or better."
+ },
+ "principles-of-marketing": {
+  "url": "https://www.sophia.org/online-courses/business/principles-of-marketing/",
+  "name": "Principles of Marketing",
+  "counts": {
+   "challenges": 15,
+   "milestones": 4,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 68
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 15 Challenges (formative assessments), 4 Milestones (summative assessments), and 1 Touchstone (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "project-management": {
+  "url": "https://www.sophia.org/online-courses/business/project-management/",
+  "name": "Project Management",
+  "counts": {
+   "challenges": 14,
+   "milestones": 6,
+   "touchstones": 2
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 83
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 14 Challenges (formative assessments), 6 Milestones (summative assessments), and 2 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "career-readiness": {
+  "url": "https://www.sophia.org/online-courses/career-success/career-readiness/",
+  "name": "Career Readiness",
+  "counts": {
+   "challenges": 13,
+   "milestones": 4,
+   "touchstones": 3
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 64
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 13 Challenges (formative assessments), 4 Milestones (summative assessments), and 3 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "college-readiness": {
+  "url": "https://www.sophia.org/online-courses/career-success/college-readiness/",
+  "name": "College Readiness",
+  "counts": {
+   "challenges": 8,
+   "milestones": 4,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 66
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 8 Challenges (formative assessments), 4 Milestones (summative assessments), and 1 Touchstone (project-based or written assessment) with an overall score of 70% or better."
+ },
+ "conflict-resolution": {
+  "url": "https://www.sophia.org/online-courses/career-success/conflict-resolution/",
+  "name": "Conflict Resolution",
+  "counts": {
+   "challenges": 19,
+   "milestones": 6,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 82
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 19 Challenges (formative assessments) and 6 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "developing-effective-teams": {
+  "url": "https://www.sophia.org/online-courses/career-success/developing-effective-teams/",
+  "name": "Developing Effective Teams",
+  "counts": {
+   "challenges": 3,
+   "milestones": 1,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 1.0,
+   "transfer_partners": 63
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 3 Challenges (formative assessments) and 1 Milestone (summative assessment) with an overall score of 70% or better."
+ },
+ "it-career-exploration": {
+  "url": "https://www.sophia.org/online-courses/career-success/it-career-exploration/",
+  "name": "IT Career Exploration",
+  "counts": {
+   "challenges": 3,
+   "milestones": 1,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 1.0,
+   "transfer_partners": 55
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 3 Challenges (formative assessments), 1 Milestone (summative assessment), and 1 Touchstone (project-based or written assessment) with an overall score of 70% or better."
+ },
+ "introduction-to-career-readiness": {
+  "url": "https://www.sophia.org/online-courses/career-success/introduction-to-career-readiness/",
+  "name": "Introduction to Career Readiness",
+  "counts": {
+   "challenges": 4,
+   "milestones": 1,
+   "touchstones": 2
+  },
+  "extras": {
+   "credits": 1.0,
+   "transfer_partners": 53
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 4 Challenges (formative assessments), 1 Milestone (summative assessment), and 2 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "the-essentials-of-managing-conflict": {
+  "url": "https://www.sophia.org/online-courses/career-success/the-essentials-of-managing-conflict/",
+  "name": "The Essentials of Managing Conflict",
+  "counts": {
+   "challenges": 3,
+   "milestones": 1,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 1.0,
+   "transfer_partners": 58
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 3 Challenges (formative assessments) and 1 Milestone (summative assessment) with an overall score of 70% or better."
+ },
+ "workplace-writing-i": {
+  "url": "https://www.sophia.org/online-courses/career-success/workplace-writing-i/",
+  "name": "Workplace Writing I",
+  "counts": {
+   "challenges": 12,
+   "touchstones": 5,
+   "milestones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 71
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 12 Challenges (formative assessments) and 5 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "workplace-writing-ii": {
+  "url": "https://www.sophia.org/online-courses/career-success/workplace-writing-ii/",
+  "name": "Workplace Writing II",
+  "counts": {
+   "challenges": 10,
+   "touchstones": 6,
+   "milestones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 76
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 10 Challenges (formative assessments) and 6 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "computer-applications": {
+  "url": "https://www.sophia.org/online-courses/computer-science-and-it/computer-applications/",
+  "name": "Computer Applications",
+  "counts": {
+   "challenges": 4,
+   "milestones": 2,
+   "touchstones": 2
+  },
+  "extras": {
+   "credits": 1.0,
+   "transfer_partners": 24
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 4 Challenges (formative assessments), 2 Milestones (summative assessments), and 2 Touchstones (project-based assessments) with an overall score of 70% or better."
+ },
+ "digital-literacy": {
+  "url": "https://www.sophia.org/online-courses/computer-science-and-it/digital-literacy/",
+  "name": "Digital Literacy",
+  "counts": {
+   "challenges": 6,
+   "milestones": 2,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 1.0,
+   "transfer_partners": 11
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 6 Challenges (formative assessments), 2 Milestones (summative assessments), and 1 Touchstone (project-based or written assessment) with an overall score of 70% or better."
+ },
+ "introduction-to-information-technology": {
+  "url": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-information-technology/",
+  "name": "Introduction to Information Technology",
+  "counts": {
+   "challenges": 11,
+   "milestones": 5,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 90
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 11 Challenges (formative assessments), and 5 Milestones (summative assessments), and 1 Touchstone (project-based or written assessment) with an overall score of 70% or better."
+ },
+ "introduction-to-java-programming": {
+  "url": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-java-programming/",
+  "name": "Introduction to Java Programming",
+  "counts": {
+   "challenges": 11,
+   "milestones": 3,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 72
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 11 Challenges (formative assessments), 3 Milestones (summative assessments), and 1 Touchstone (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "introduction-to-networking": {
+  "url": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-networking/",
+  "name": "Introduction to Networking",
+  "counts": {
+   "challenges": 15,
+   "milestones": 6,
+   "touchstone_tasks": 4,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 66
+  },
+  "confident": true,
+  "ambiguous_fields": [
+   "touchstones"
+  ],
+  "schema": "standard",
+  "evidence": " You must complete 15 Challenges (formative assessments), 6 Milestones (summative assessments), and 4 Touchstone Tasks and 1 Touchstone (project-based or written assessments) with an overall score of "
+ },
+ "introduction-to-python-programming": {
+  "url": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-python-programming/",
+  "name": "Introduction to Python Programming",
+  "counts": {
+   "challenges": 11,
+   "milestones": 3,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 71
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 11 Challenges (formative assessments), 3 Milestones (summative assessments), and 1 Touchstone (project-based assessment) with an overall score of 70% or better."
+ },
+ "introduction-to-relational-databases": {
+  "url": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-relational-databases/",
+  "name": "Introduction to Relational Databases",
+  "counts": {
+   "challenges": 19,
+   "milestones": 6,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 77
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 19 Challenges (formative assessments) and 6 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "introduction-to-web-development": {
+  "url": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-web-development/",
+  "name": "Introduction to Web Development",
+  "counts": {
+   "challenges": 10,
+   "milestones": 3,
+   "touchstone_tasks": 5,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 77
+  },
+  "confident": true,
+  "ambiguous_fields": [
+   "touchstones"
+  ],
+  "schema": "standard",
+  "evidence": " You must complete 10 Challenges (formative assessments), 3 Milestones (summative assessments), and 5 Touchstone Tasks and 1 Touchstone (project-based or written assessments) with an overall score of "
+ },
+ "english-composition-i": {
+  "url": "https://www.sophia.org/online-courses/english-and-communication/english-composition-i/",
+  "name": "English Composition I",
+  "counts": {
+   "challenges": 14,
+   "touchstones": 5,
+   "milestones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 103
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 14 Challenges (formative assessments) and 5 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "english-composition-ii": {
+  "url": "https://www.sophia.org/online-courses/english-and-communication/english-composition-ii/",
+  "name": "English Composition II",
+  "counts": {
+   "challenges": 9,
+   "touchstones": 7,
+   "milestones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 102
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 9 Challenges (formative assessments) and 7 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "foundations-of-english-composition": {
+  "url": "https://www.sophia.org/online-courses/english-and-communication/foundations-of-english-composition/",
+  "name": "Foundations of English Composition",
+  "counts": {
+   "challenges": 8,
+   "milestones": 4,
+   "touchstones": 3
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 49
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 8 Challenges (formative assessments), 4 Milestones (summative assessments), and 3 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "public-speaking": {
+  "url": "https://www.sophia.org/online-courses/english-and-communication/public-speaking/",
+  "name": "Public Speaking",
+  "counts": {
+   "challenges": 14,
+   "milestones": 5,
+   "touchstones": 4
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 104
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 14 Challenges (formative assessments), 5 Milestones (summative assessments), and 4 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "visual-communications": {
+  "url": "https://www.sophia.org/online-courses/english-and-communication/visual-communications/",
+  "name": "Visual Communications",
+  "counts": {
+   "challenges": 11,
+   "milestones": 5,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 86
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 11 Challenges (formative assessments), 5 Milestones (summative assessments), and 1 Touchstone (project-based or written assessment) with an overall score of 70% or better."
+ },
+ "workplace-communication": {
+  "url": "https://www.sophia.org/online-courses/english-and-communication/workplace-communication/",
+  "name": "Workplace Communication",
+  "counts": {
+   "challenges": 12,
+   "milestones": 3,
+   "touchstones": 2
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 86
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 12 Challenges (formative assessments), 3 Milestones (summative assessments), and 2 Touchstones (project-based or written assessment) with an overall score of 70% or better."
+ },
+ "ancient-greek-philosophers": {
+  "url": "https://www.sophia.org/online-courses/humanities/ancient-greek-philosophers/",
+  "name": "Ancient Greek Philosophers",
+  "counts": {
+   "challenges": 4,
+   "milestones": 1,
+   "touchstone_tasks": 1,
+   "touchstones": 2
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 88
+  },
+  "confident": true,
+  "ambiguous_fields": [
+   "touchstones"
+  ],
+  "schema": "standard",
+  "evidence": " You must complete 4 Challenges (formative assessments), 1 Milestone (summative assessment), and 1 Touchstone Tasks and 2 Touchstones (project-based or written assessment) with an overall score of 70%"
+ },
+ "approaches-to-studying-religions": {
+  "url": "https://www.sophia.org/online-courses/humanities/approaches-to-studying-religions/",
+  "name": "Approaches to Studying Religions",
+  "counts": {
+   "challenges": 15,
+   "milestones": 4,
+   "touchstones": 3
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 88
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 15 Challenges (formative assessments), 4 Milestones (summative assessments), and 3 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "art-history-i": {
+  "url": "https://www.sophia.org/online-courses/humanities/art-history-i/",
+  "name": "Art History I",
+  "counts": {
+   "challenges": 16,
+   "milestones": 5,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 98
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 16 Challenges (formative assessments), 5 Milestones (summative assessments), and 1 Touchstone (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "art-history-ii": {
+  "url": "https://www.sophia.org/online-courses/humanities/art-history-ii/",
+  "name": "Art History II",
+  "counts": {
+   "challenges": 14,
+   "milestones": 5,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 90
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 14 Challenges (formative assessments), 5 Milestones (summative assessments), and 1 Touchstone (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "critical-thinking": {
+  "url": "https://www.sophia.org/online-courses/humanities/critical-thinking/",
+  "name": "Critical Thinking",
+  "counts": {
+   "challenges": 13,
+   "milestones": 4,
+   "touchstones": 2
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 85
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete all 13 Challenges (formative assessments), 4 Milestones (summative assessments), and 2 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "introduction-to-ethics": {
+  "url": "https://www.sophia.org/online-courses/humanities/introduction-to-ethics/",
+  "name": "Introduction to Ethics",
+  "counts": {
+   "challenges": 13,
+   "milestones": 5,
+   "touchstones": 3
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 95
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 13 Challenges (formative assessments), 5 Milestones (summative assessments), and 3 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "french-i": {
+  "url": "https://www.sophia.org/online-courses/language/french-i/",
+  "name": "French I",
+  "counts": {
+   "challenges": 12,
+   "milestones": 4,
+   "touchstones": 5
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 71
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 12 Challenges (formative assessments), 4 Milestones (summative assessments), and 5 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "spanish-i": {
+  "url": "https://www.sophia.org/online-courses/language/spanish-i/",
+  "name": "Spanish I",
+  "counts": {
+   "challenges": 9,
+   "milestones": 4,
+   "touchstones": 5
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 85
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 9 Challenges (formative assessments), 4 Milestones (summative assessments), and 5 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "spanish-ii": {
+  "url": "https://www.sophia.org/online-courses/language/spanish-ii/",
+  "name": "Spanish II",
+  "counts": {
+   "challenges": 9,
+   "milestones": 4,
+   "touchstones": 5
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 83
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 9 Challenges (formative assessments), 4 Milestones (summative assessments), and 5 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "calculus-i": {
+  "url": "https://www.sophia.org/online-courses/math/calculus-i/",
+  "name": "Calculus I",
+  "counts": {
+   "challenges": 21,
+   "milestones": 6,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 4.0,
+   "transfer_partners": 92
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 21 Challenges (formative assessments) and 6 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "college-algebra": {
+  "url": "https://www.sophia.org/online-courses/math/college-algebra/",
+  "name": "College Algebra",
+  "counts": {
+   "challenges": 22,
+   "milestones": 6,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 104
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 22 Challenges (formative assessments) and 6 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "foundations-of-statistics": {
+  "url": "https://www.sophia.org/online-courses/math/foundations-of-statistics/",
+  "name": "Foundations of Statistics",
+  "counts": {
+   "challenges": 5,
+   "milestones": 3,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 2.0,
+   "transfer_partners": 50
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 5 Challenges (formative assessments) and 3 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "introduction-to-college-mathematics": {
+  "url": "https://www.sophia.org/online-courses/math/introduction-to-college-mathematics/",
+  "name": "Introduction to College Mathematics",
+  "counts": {
+   "challenges": 15,
+   "milestones": 6,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 76
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 15 Challenge assessments (these are like quizzes) and 6 Milestone assessments (these are like tests) with an overall score of 70% or better."
+ },
+ "introduction-to-statistics": {
+  "url": "https://www.sophia.org/online-courses/math/introduction-to-statistics/",
+  "name": "Introduction to Statistics",
+  "counts": {
+   "challenges": 20,
+   "milestones": 6,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 102
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 20 Challenges (formative assessments) and 6 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "precalculus": {
+  "url": "https://www.sophia.org/online-courses/math/precalculus/",
+  "name": "Precalculus",
+  "counts": {
+   "challenges": 17,
+   "milestones": 6,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 83
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 17 Challenges (formative assessments) and 6 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "anatomy-and-physiology-i": {
+  "url": "https://www.sophia.org/online-courses/science/anatomy-and-physiology-i/",
+  "name": "Anatomy and Physiology I",
+  "counts": {
+   "challenges": 17,
+   "milestones": 5,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 82
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 17 Challenges (formative assessments) and 5 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "anatomy-and-physiology-i-lab": {
+  "url": "https://www.sophia.org/online-courses/science/anatomy-and-physiology-i-lab/",
+  "name": "Anatomy and Physiology I Lab",
+  "counts": {
+   "activities": 13,
+   "touchstones": 2,
+   "challenges": 0,
+   "milestones": 0
+  },
+  "extras": {
+   "credits": 1.0,
+   "transfer_partners": 65
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "lab",
+  "evidence": " You must complete 13 Activities (formative assessments) and 2 Touchstones (written assessments) with an overall score of 70% or better."
+ },
+ "anatomy-and-physiology-ii": {
+  "url": "https://www.sophia.org/online-courses/science/anatomy-and-physiology-ii/",
+  "name": "Anatomy and Physiology II",
+  "counts": {
+   "challenges": 13,
+   "milestones": 4,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 71
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 13 Challenges (formative assessments), and 4 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "anatomy-and-physiology-ii-lab": {
+  "url": "https://www.sophia.org/online-courses/science/anatomy-and-physiology-ii-lab/",
+  "name": "Anatomy and Physiology II Lab",
+  "counts": {
+   "activities": 15,
+   "touchstones": 2,
+   "challenges": 0,
+   "milestones": 0
+  },
+  "extras": {
+   "credits": 1.0,
+   "transfer_partners": 57
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "lab",
+  "evidence": " You must complete 15 Activities (formative assessments) and 2 Touchstones (written assignments) with an overall score of 70% or better."
+ },
+ "environmental-science": {
+  "url": "https://www.sophia.org/online-courses/science/environmental-science/",
+  "name": "Environmental Science",
+  "counts": {
+   "challenges": 13,
+   "milestones": 5,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 94
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 13 Challenges (formative assessments), 4 Knowledge Checks (short answer responses), 5 Milestones (summative assessments), and 1 Touchstone (project-based or written assessments) wit"
+ },
+ "health-fitness-and-wellness": {
+  "url": "https://www.sophia.org/online-courses/science/health-fitness-and-wellness/",
+  "name": "Health, Fitness, and Wellness",
+  "counts": {
+   "challenges": 13,
+   "milestones": 5,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 55
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 13 Challenges (formative assessments), 5 Milestones (summative assessments), and 1 Touchstone with an overall score of 70% or better."
+ },
+ "human-biology": {
+  "url": "https://www.sophia.org/online-courses/science/human-biology/",
+  "name": "Human Biology",
+  "counts": {
+   "challenges": 21,
+   "milestones": 7,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 100
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 21 Challenges (formative assessments) and 7 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "human-biology-lab": {
+  "url": "https://www.sophia.org/online-courses/science/human-biology-lab/",
+  "name": "Human Biology Lab",
+  "counts": {
+   "activities": 14,
+   "touchstones": 2,
+   "challenges": 0,
+   "milestones": 0
+  },
+  "extras": {
+   "credits": 1.0,
+   "transfer_partners": 67
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "lab",
+  "evidence": " You must complete 14 Activities (formative assessments) and 2 Touchstones (written assignments) with an overall course average of 70% or better."
+ },
+ "introduction-to-chemistry": {
+  "url": "https://www.sophia.org/online-courses/science/introduction-to-chemistry/",
+  "name": "Introduction to Chemistry",
+  "counts": {
+   "challenges": 12,
+   "milestones": 4,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 90
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 12 Challenge assessments (these are like quizzes), and 4 Milestone assessments (these are like tests), with an overall score of 70% or better."
+ },
+ "introduction-to-chemistry-lab": {
+  "url": "https://www.sophia.org/online-courses/science/introduction-to-chemistry-lab/",
+  "name": "Introduction to Chemistry Lab",
+  "counts": {
+   "activities": 15,
+   "touchstones": 2,
+   "challenges": 0,
+   "milestones": 0
+  },
+  "extras": {
+   "credits": 1.0,
+   "transfer_partners": 67
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "lab",
+  "evidence": " You must complete 15 Activities (formative assessments), and 2 Touchstones (written assignments) with an overall course average of 70% or better."
+ },
+ "introduction-to-nutrition": {
+  "url": "https://www.sophia.org/online-courses/science/introduction-to-nutrition/",
+  "name": "Introduction to Nutrition",
+  "counts": {
+   "challenges": 17,
+   "milestones": 4,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 85
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 17 Challenges (formative assessments) and 4 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "introduction-to-physics": {
+  "url": "https://www.sophia.org/online-courses/science/introduction-to-physics/",
+  "name": "Introduction to Physics",
+  "counts": {
+   "challenges": 18,
+   "milestones": 7,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 27
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 18 Challenges (formative assessments) and 7 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "medical-terminology": {
+  "url": "https://www.sophia.org/online-courses/science/medical-terminology/",
+  "name": "Medical Terminology",
+  "counts": {
+   "challenges": 21,
+   "milestones": 7,
+   "touchstone_tasks": 1,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 35
+  },
+  "confident": true,
+  "ambiguous_fields": [
+   "touchstones"
+  ],
+  "schema": "standard",
+  "evidence": " You must complete 21 Challenges (formative assessments), 7 Milestones (summative assessments), and 1 Touchstone Task and 1 Touchstone (project-based or written assessments) with an overall score of 7"
+ },
+ "microbiology": {
+  "url": "https://www.sophia.org/online-courses/science/microbiology/",
+  "name": "Microbiology",
+  "counts": {
+   "challenges": 19,
+   "milestones": 6,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 82
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 19 Challenges (formative assessments) and 6 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "microbiology-lab": {
+  "url": "https://www.sophia.org/online-courses/science/microbiology-lab/",
+  "name": "Microbiology Lab",
+  "counts": {
+   "activities": 15,
+   "touchstones": 2,
+   "challenges": 0,
+   "milestones": 0
+  },
+  "extras": {
+   "credits": 1.0,
+   "transfer_partners": 66
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "lab",
+  "evidence": " You must complete 15 Activities (formative assessments) and 2 Touchstones (written assignments) with an overall course average of 70% or better."
+ },
+ "public-and-community-health": {
+  "url": "https://www.sophia.org/online-courses/science/public-and-community-health/",
+  "name": "Public and Community Health",
+  "counts": {
+   "challenges": 19,
+   "milestones": 6,
+   "touchstones": 2
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 56
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 19 Challenges (formative assessments), 6 Milestones (summative assessments), and 2 Touchstones with an overall score of 70% or better."
+ },
+ "criminology": {
+  "url": "https://www.sophia.org/online-courses/social-science/criminology/",
+  "name": "Criminology",
+  "counts": {
+   "challenges": 12,
+   "milestones": 4,
+   "touchstones": 2
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 62
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 12 Challenges (formative assessments), 4 Milestones (summative assessments), and 2 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "introduction-to-criminal-justice": {
+  "url": "https://www.sophia.org/online-courses/social-science/introduction-to-criminal-justice/",
+  "name": "Introduction to Criminal Justice",
+  "counts": {
+   "challenges": 12,
+   "milestones": 4,
+   "touchstones": 2
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 55
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 12 Challenges (formative assessments), 4 Milestones (summative assessments), and 2 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "introduction-to-education": {
+  "url": "https://www.sophia.org/online-courses/social-science/introduction-to-education/",
+  "name": "Introduction to Education",
+  "counts": {
+   "challenges": 13,
+   "milestones": 5,
+   "touchstones": 2
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 14
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 13 Challenges (formative assessments), 5 Milestones (summative assessments), and 2 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "introduction-to-psychology": {
+  "url": "https://www.sophia.org/online-courses/social-science/introduction-to-psychology/",
+  "name": "Introduction to Psychology",
+  "counts": {
+   "challenges": 13,
+   "milestones": 4,
+   "touchstones": 3
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 104
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 13 Challenges (formative assessments), 4 Milestones (summative assessments), and 3 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "introduction-to-sociology": {
+  "url": "https://www.sophia.org/online-courses/social-science/introduction-to-sociology/",
+  "name": "Introduction to Sociology",
+  "counts": {
+   "challenges": 12,
+   "milestones": 4,
+   "touchstones": 2
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 104
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 12 Challenges (formative assessments), 4 Milestones (summative assessments), and 2 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "lifespan-development": {
+  "url": "https://www.sophia.org/online-courses/social-science/lifespan-development/",
+  "name": "Lifespan Development",
+  "counts": {
+   "challenges": 20,
+   "milestones": 6,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 75
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 20 Challenges (formative assessments) and 6 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "macroeconomics": {
+  "url": "https://www.sophia.org/online-courses/social-science/macroeconomics/",
+  "name": "Macroeconomics",
+  "counts": {
+   "challenges": 10,
+   "milestones": 5,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 98
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 10 Challenges (formative assessments) and 5 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "microeconomics": {
+  "url": "https://www.sophia.org/online-courses/social-science/microeconomics/",
+  "name": "Microeconomics",
+  "counts": {
+   "challenges": 12,
+   "milestones": 4,
+   "touchstones": 0
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 97
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 12 Challenges (formative assessments) and 4 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "us-government": {
+  "url": "https://www.sophia.org/online-courses/social-science/us-government/",
+  "name": "U.S. Government",
+  "counts": {
+   "challenges": 17,
+   "milestones": 5,
+   "touchstones": 2
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 82
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 17 Challenges (formative assessments), 5 Milestones (summative assessments), and 2 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+ },
+ "us-history-i": {
+  "url": "https://www.sophia.org/online-courses/social-science/us-history-i/",
+  "name": "U.S. History I",
+  "counts": {
+   "challenges": 12,
+   "milestones": 5,
+   "touchstones": 2
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 99
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 12 Challenges (formative assessments), 5 Milestones (summative assessments), and 2 Touchstones (project-based or written assessment) with an overall score of 70% or better."
+ },
+ "us-history-ii": {
+  "url": "https://www.sophia.org/online-courses/social-science/us-history-ii/",
+  "name": "U.S. History II",
+  "counts": {
+   "challenges": 17,
+   "milestones": 5,
+   "touchstones": 2
+  },
+  "extras": {
+   "credits": 3.0,
+   "transfer_partners": 98
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 17 Challenges (formative assessments), 5 Milestones (summative assessments), and 2 Touchstones (project-based or written assessment) with an overall score of 70% or better."
+ }
+}

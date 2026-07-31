@@ -1,0 +1,129 @@
+name: Verify course data
+
+on:
+  schedule:
+    - cron: "17 9 * * *"      # daily ~09:17 UTC; GitHub cron is best-effort
+  workflow_dispatch: {}       # manual trigger (works from mobile web)
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: verify
+  cancel-in-progress: false
+
+env:
+  BRANCH: auto/course-corrections
+  BROKEN_TITLE: "🚨 Verification pipeline broken"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install requests beautifulsoup4
+
+      - name: Run verification
+        id: verify
+        run: python scripts/verify_sophia.py --csv data/courses.csv --labs-csv data/labs.csv --propose
+
+      # ----- corrections found: open (or refresh) a PR for one-tap mobile review -----
+      - name: Open or refresh correction PR
+        if: steps.verify.outputs.outcome == 'changes'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name  "sophiaindex-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -B "$BRANCH"
+          git add data/courses.csv data/labs.csv data/changelog.json \
+                  state/live_snapshot.json state/report_hash.txt
+          git commit -m "Course corrections from Sophia public pages ($(date -u +%F))"
+          git push -f origin "$BRANCH"
+          EXISTING=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number')
+          if [ -z "$EXISTING" ]; then
+            gh pr create \
+              --title "Course corrections — ${{ steps.verify.outputs.n_confident }} field(s) differ from Sophia" \
+              --body-file reports/report.md \
+              --head "$BRANCH"
+            gh pr edit "$BRANCH" --add-reviewer "${{ github.repository_owner }}" || true
+          else
+            # silent refresh: one push notification at PR open, none for re-scrapes
+            gh pr edit "$EXISTING" --body-file reports/report.md
+          fi
+
+      # ----- weak parses / new / removed courses: needs eyes, but no auto-edit -----
+      # report_changed gate: a persistent weak parse alarms once, not daily —
+      # the hash file committed below is what makes the dedupe stick across runs
+      - name: Open or update review issue
+        if: steps.verify.outputs.outcome == 'review_only' && steps.verify.outputs.report_changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="👀 Verification findings need human review"
+          EXISTING=$(gh issue list --state open --search "\"$TITLE\" in:title" --json number --jq '.[0].number')
+          if [ -z "$EXISTING" ]; then
+            gh issue create --title "$TITLE" --body-file reports/report.md
+          else
+            gh issue comment "$EXISTING" --body-file reports/report.md
+          fi
+          git config user.name  "sophiaindex-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add state/report_hash.txt
+          git commit -m "Record review-report hash (dedupe daily alerts)"
+          git push
+
+      # ----- fail loudly: scraper broke, catalog empty, or any step above died -----
+      - name: Alarm on breakage
+        if: failure() || steps.verify.outputs.outcome == 'broken'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BODY=reports/report.md
+          [ -f "$BODY" ] || { echo "Workflow failed before a report was written. Check the Actions log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" > /tmp/body.md; BODY=/tmp/body.md; }
+          EXISTING=$(gh issue list --state open --search "\"$BROKEN_TITLE\" in:title" --json number --jq '.[0].number')
+          if [ -z "$EXISTING" ]; then
+            gh issue create --title "$BROKEN_TITLE" --body-file "$BODY"
+          else
+            gh issue comment "$EXISTING" --body-file "$BODY"
+          fi
+          exit 1
+
+      # ----- keep the scheduled workflow alive past GitHub's 60-day idle cutoff -----
+      # A merge commit resets the clock, but quiet months don't. Touch a heartbeat
+      # file on main when it's >25 days stale.
+      - name: Heartbeat commit
+        if: success()
+        run: |
+          git checkout main 2>/dev/null || git checkout master
+          git pull --ff-only
+          # the heartbeat file stores its own timestamp (shallow clones make
+          # git-log-based age checks unreliable)
+          LAST=$(date -d "$(cat state/heartbeat 2>/dev/null || echo 1970-01-01)" +%s)
+          AGE=$(( ($(date +%s) - LAST) / 86400 ))
+          if [ "$AGE" -gt 25 ]; then
+            git config user.name  "sophiaindex-bot"
+            git config user.email "actions@users.noreply.github.com"
+            date -u +%FT%TZ > state/heartbeat
+            git add state/heartbeat
+            git commit -m "Heartbeat: keep scheduled verification alive"
+            git push
+          fi
+
+      # ----- optional dead-man's switch: healthchecks.io emails you if the cron
+      # ever stops firing (covers the 60-day disable AND silent cron drift).
+      # Create a free check, then: repo Settings → Secrets → HEALTHCHECK_URL -----
+      - name: Ping healthcheck
+        if: success()
+        env:
+          HEALTHCHECK_URL: ${{ secrets.HEALTHCHECK_URL }}
+        run: |
+          [ -n "$HEALTHCHECK_URL" ] && curl -fsS --retry 3 "$HEALTHCHECK_URL" > /dev/null || true

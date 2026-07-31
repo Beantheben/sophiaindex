@@ -277,7 +277,7 @@ footer.site .sep{margin:0 8px;opacity:.5}
 (function(){
 "use strict";
 var SHEET = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQWk2WkdOm6rwGEu85ROKxZ_hd6q8UJpKU-zvIht4X4m2jQeHs48BvSMkuu6pD3jeTeQkvErHSXImA1/pub?single=true&output=csv&gid=";
-var GIDS = ["1459099173","1842433762","170033960"];
+var RATINGS_GID = "170033960"; /* course facts now live in data/*.csv (git); the Sheet only serves Form-driven ratings */
 var FORM = "https://docs.google.com/forms/d/e/1FAIpQLSeCgZEcIdpkciqUYulAbGvjPtCQ7eZiilw6thPO6y2yecaghw/viewform";
 var PREFILL = FORM + "?usp=pp_url&entry.850100469=";
 var LOWQ = 54; // bottom-quintile partner warning threshold
@@ -348,7 +348,11 @@ function applyData(courses,labs,ratings){
   buildCatFilter(); render(); renderTiers();
 }
 function load(){
-  Promise.all(GIDS.map(function(g){return fetchCsv(SHEET+g).catch(function(){return null;});}))
+  Promise.all([
+    fetchCsv("data/courses.csv").catch(function(){return null;}),
+    fetchCsv("data/labs.csv").catch(function(){return null;}),
+    fetchCsv(SHEET+RATINGS_GID).catch(function(){return null;})
+  ])
   .then(function(sets){
     var c=classify(sets);
     if(c.courses && c.labs){ applyData(c.courses,c.labs,c.ratings||[]); }

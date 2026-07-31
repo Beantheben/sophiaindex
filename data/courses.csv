@@ -1,0 +1,78 @@
+course_code,ace_id,course_name,last_verified,credits,category,retired,units,challenges,touchstones,knowledge_checks,milestones,standalone_final,pass_threshold,transfer_partners
+BUSI1025,SOPH-0059,Business Communication,2026-07-24,3,Business,N,4,13,4,0,4,N,70,83
+BUSI2090,SOPH-0091,Business Data Analytics,2026-07-24,3,Business,N,6,17,2,0,6,N,70,46
+BUSI1020,SOPH-0076,Business Ethics,2026-07-24,3,Business,N,4,12,2,0,5,Y,70,72
+BUSI1050,SOPH-0032,Business Law,2026-07-24,3,Business,N,3,11,1,0,4,Y,70,83
+BUSI1010,SOPH-0010,Financial Accounting,2026-07-24,3,Business,N,4,9,0,0,5,Y,70,85
+BUSI2070,SOPH-0092,Healthcare Management,2026-07-24,3,Business,N,4,18,3,0,4,N,70,46
+BUSI1080,SOPH-0089,Human Resource Management,2026-07-24,3,Business,N,4,16,1,0,4,N,70,58
+BUS1001,SOPH-0014,Introduction to Business,2026-07-24,3,Business,N,4,12,1,0,5,Y,70,88
+BUSI1011,SOPH-0079,Managerial Accounting,2026-07-24,3,Business,N,4,14,0,0,5,Y,70,72
+BUSI2030,SOPH-0086,Operations Management,2026-07-24,3,Business,N,4,12,4,0,4,N,70,59
+BUSI2015,SOPH-0083,Organizational Behavior,2026-07-24,3,Business,N,4,16,3,0,4,N,70,60
+BUSI1060,SOPH-0044,Personal Finance,2026-07-24,3,Business,N,5,19,2,0,5,N,70,74
+BUSI1015,SOPH-0033,Principles of Finance,2026-07-24,3,Business,N,4,15,0,0,5,Y,70,83
+BUSI2040,SOPH-0096,Principles of Leadership,2026-07-24,3,Business,N,4,19,3,0,4,N,70,17
+BUSI1013,SOPH-0054,Principles of Management,2026-07-24,3,Business,N,4,16,1,0,4,N,70,83
+BUSI2020,SOPH-0085,Principles of Marketing,2026-07-24,3,Business,N,4,15,1,0,4,N,70,68
+BUSI1023,SOPH-0013,Project Management,2026-07-24,3,Business,N,5,15,2,0,6,Y,70,82
+CRED1010,SOPH-0066,Career Readiness,2026-07-24,3,Career Success,N,4,13,2,0,4,N,70,64
+HUMA1005,SOPH-0031,College Readiness,2026-07-24,3,Career Success,N,3,9,1,0,4,Y,70,65
+HUMA1041,SOPH-0007,Conflict Resolution,2026-07-24,3,Career Success,N,5,19,0,0,6,Y,70,81
+BUS1200,SOPH-0021,Developing Effective Teams,2026-07-24,1,Career Success,N,1,3,0,0,1,N,70,64
+CS1003,SOPH-0041,IT Career Exploration,2026-07-24,1,Career Success,N,1,3,1,0,1,N,70,54
+CRED1001,SOPH-0061,Introduction to Career Readiness,2026-07-24,1,Career Success,N,1,4,2,0,1,N,70,53
+HUMA1040,SOPH-0026,The Essentials of Managing Conflict,2026-07-24,1,Career Success,N,1,3,0,0,1,N,70,57
+ENG1010,SOPH-0050,Workplace Writing I,2026-07-24,3,Career Success,N,4,12,5,0,0,N,70,70
+ENG1020,SOPH-0049,Workplace Writing II,2026-07-24,3,Career Success,N,4,11,2,0,4,N,70,75
+CS0050,SOPH-0093,Computer Applications,2026-07-24,1,Computer Science and IT,N,2,4,2,0,2,N,70,24
+CS0060,SOPH-0097,Digital Literacy,2026-07-24,1,Computer Science and IT,N,2,6,1,0,2,N,70,11
+CS1001,SOPH-0023,Introduction to Information Technology,2026-07-24,3,Computer Science and IT,N,4,11,1,0,5,Y,70,90
+CS1101,SOPH-0062,Introduction to Java Programming,2026-07-24,3,Computer Science and IT,N,4,12,0,0,4,N,70,71
+CS1015,SOPH-0068,Introduction to Networking,2026-07-24,3,Computer Science and IT,N,5,19,1,0,6,Y,70,66
+CS1100,SOPH-0058,Introduction to Python Programming,2026-07-24,3,Computer Science and IT,N,4,12,1,0,3,N,70,71
+CS1011,SOPH-0047,Introduction to Relational Databases,2026-07-24,3,Computer Science and IT,N,5,19,0,0,6,Y,70,76
+CS1005,SOPH-0043,Introduction to Web Development,2026-07-24,3,Computer Science and IT,N,3,15,1,0,3,N,70,76
+ENG1001,SOPH-0015,English Composition I,2026-07-24,3,English and Communication,N,4,14,5,0,0,N,70,102
+ENG1002,SOPH-0030,English Composition II,2026-07-24,3,English and Communication,N,4,9,7,0,0,N,70,101
+ENG0050,SOPH-0019,Foundations of English Composition,2026-07-24,3,English and Communication,N,4,8,3,0,4,N,70,49
+COMM1002,SOPH-0024,Public Speaking,2026-07-24,3,English and Communication,N,5,14,4,0,5,N,70,103
+COMM1005,SOPH-0009,Visual Communications,2026-07-24,3,English and Communication,N,4,11,1,0,5,Y,70,85
+COMM1010,SOPH-0034,Workplace Communication,2026-07-24,3,English and Communication,N,4,12,2,0,3,N,70,85
+PHIL1001,SOPH-0027,Ancient Greek Philosophers,2026-07-24,3,Humanities,N,1,4,2,0,1,N,70,89
+REL1001,SOPH-0008,Approaches to Studying Religions,2026-07-24,3,Humanities,N,3,15,3,0,4,Y,70,87
+ArtHist1001,SOPH-0006,Art History I,2026-07-24,3,Humanities,N,4,16,1,0,5,Y,70,97
+HUMA1012,SOPH-0029,Art History II,2026-07-24,3,Humanities,N,4,14,1,0,5,Y,70,89
+PHIL1005,SOPH-0065,Critical Thinking,2026-07-24,3,Humanities,N,4,13,2,0,4,N,70,84
+PHIL1002,SOPH-0020,Introduction to Ethics,2026-07-24,3,Humanities,N,4,13,3,0,5,Y,70,95
+FREN1001,SOPH-0077,French I,2026-07-24,3,Language,N,3,12,5,0,4,Y,70,71
+SPAN1001,SOPH-0057,Spanish I,2026-07-24,3,Language,N,3,9,5,0,4,Y,70,85
+SPAN1002,SOPH-0064,Spanish II,2026-07-24,3,Language,N,3,9,5,0,4,Y,70,83
+MATH1040,SOPH-0060,Calculus I,2026-07-24,4,Math,N,5,21,0,0,6,Y,70,92
+MATH1001,SOPH-0001,College Algebra,2026-07-24,3,Math,N,5,22,0,0,6,Y,70,103
+STAT0050,SOPH-0017,Foundations of Statistics,2026-07-24,2,Math,N,2,5,0,0,3,Y,70,50
+MATH1020,SOPH-0055,Introduction to College Mathematics,2026-07-24,3,Math,N,5,15,0,0,6,Y,70,76
+STAT1001,SOPH-0005,Introduction to Statistics,2026-07-24,3,Math,N,5,20,0,0,6,Y,70,101
+MATH1035,SOPH-0069,Precalculus,2026-07-24,3,Math,N,5,18,0,0,6,Y,70,82
+SCIE1050,SOPH-0073,Anatomy and Physiology I,2026-07-24,3,Science,N,4,17,0,0,5,Y,70,81
+SCIE1055,SOPH-0081,Anatomy and Physiology II,2026-07-24,3,Science,N,4,13,0,0,5,Y,70,71
+HLTH1011,SOPH-0080,"Health, Fitness, and Wellness",2026-07-24,3,Science,N,4,13,1,0,5,Y,70,58
+SCIE1020,SOPH-0002,Human Biology,2026-07-24,3,Science,N,6,21,0,0,7,Y,70,99
+CHEM1001,SOPH-0056,Introduction to Chemistry,2026-07-24,3,Science,N,4,12,0,0,5,Y,70,90
+HLTH1010,SOPH-0063,Introduction to Nutrition,2026-07-24,3,Science,N,4,17,0,0,5,Y,70,85
+SCIE1060,SOPH-0095,Introduction to Physics,2026-07-24,3,Science,N,6,18,0,0,7,Y,70,27
+HLTH1005,SOPH-0094,Medical Terminology,2026-07-24,3,Science,N,6,21,2,0,7,Y,70,35
+SCIE1045,SOPH-0074,Microbiology,2026-07-24,3,Science,N,5,19,0,0,6,Y,70,81
+HLTH1030,SOPH-0087,Public and Community Health,2026-07-24,3,Science,N,5,19,2,0,6,Y,70,56
+ENVS1001,SOPH-0016,Environmental Science,2026-07-24,3,Science,N,4,13,1,4,5,Y,70,94
+SOSC1050,SOPH-0084,Criminology,2026-07-24,3,Social Science,N,4,12,2,0,4,N,70,62
+CRIM1001,SOPH-0090,Introduction to Criminal Justice,2026-07-24,3,Social Science,N,4,12,2,0,4,N,70,54
+EDUC1005,SOPH-0098,Introduction to Education,2026-07-24,3,Social Science,N,4,13,2,0,5,Y,70,14
+PSYC1010,SOPH-0048,Introduction to Psychology,2026-07-24,3,Social Science,N,4,13,3,0,4,N,70,103
+SOCI1010,SOPH-0051,Introduction to Sociology,2026-07-24,3,Social Science,N,4,12,2,0,4,N,70,103
+HLTH1020,SOPH-0078,Lifespan Development,2026-07-24,3,Social Science,N,5,20,0,0,6,Y,70,75
+ECON1001,SOPH-0012,Macroeconomics,2026-07-24,3,Social Science,N,4,10,0,0,5,Y,70,96
+ECON1002,SOPH-0011,Microeconomics,2026-07-24,3,Social Science,N,3,12,0,0,4,Y,70,96
+HIST1020,SOPH-0071,U.S. Government,2026-07-24,3,Social Science,N,4,17,2,0,5,Y,70,82
+HIST1001,SOPH-0022,U.S. History I,2026-07-24,3,Social Science,N,4,12,2,0,5,Y,70,98
+HIST1002,SOPH-0025,U.S. History II,2026-07-24,3,Social Science,N,4,17,2,0,5,Y,70,97
