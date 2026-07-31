@@ -1,0 +1,474 @@
+[
+ {
+  "date": "2026-07-31",
+  "course": "Business Data Analytics",
+  "field": "challenges",
+  "old": "17",
+  "new": 15,
+  "source": "https://www.sophia.org/online-courses/business/business-data-analytics/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Business Law",
+  "field": "transfer_partners",
+  "old": "83",
+  "new": 81,
+  "source": "https://www.sophia.org/online-courses/business/business-law/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Financial Accounting",
+  "field": "transfer_partners",
+  "old": "85",
+  "new": 86,
+  "source": "https://www.sophia.org/online-courses/business/financial-accounting/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Personal Finance",
+  "field": "transfer_partners",
+  "old": "74",
+  "new": 75,
+  "source": "https://www.sophia.org/online-courses/business/personal-finance/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Principles of Finance",
+  "field": "transfer_partners",
+  "old": "83",
+  "new": 84,
+  "source": "https://www.sophia.org/online-courses/business/principles-of-finance/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Principles of Management",
+  "field": "transfer_partners",
+  "old": "83",
+  "new": 84,
+  "source": "https://www.sophia.org/online-courses/business/principles-of-management/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Project Management",
+  "field": "challenges",
+  "old": "15",
+  "new": 14,
+  "source": "https://www.sophia.org/online-courses/business/project-management/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Project Management",
+  "field": "transfer_partners",
+  "old": "82",
+  "new": 83,
+  "source": "https://www.sophia.org/online-courses/business/project-management/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Career Readiness",
+  "field": "touchstones",
+  "old": "2",
+  "new": 3,
+  "source": "https://www.sophia.org/online-courses/career-success/career-readiness/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "College Readiness",
+  "field": "challenges",
+  "old": "9",
+  "new": 8,
+  "source": "https://www.sophia.org/online-courses/career-success/college-readiness/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "College Readiness",
+  "field": "transfer_partners",
+  "old": "65",
+  "new": 66,
+  "source": "https://www.sophia.org/online-courses/career-success/college-readiness/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Conflict Resolution",
+  "field": "transfer_partners",
+  "old": "81",
+  "new": 82,
+  "source": "https://www.sophia.org/online-courses/career-success/conflict-resolution/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Developing Effective Teams",
+  "field": "transfer_partners",
+  "old": "64",
+  "new": 63,
+  "source": "https://www.sophia.org/online-courses/career-success/developing-effective-teams/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "IT Career Exploration",
+  "field": "transfer_partners",
+  "old": "54",
+  "new": 55,
+  "source": "https://www.sophia.org/online-courses/career-success/it-career-exploration/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "The Essentials of Managing Conflict",
+  "field": "transfer_partners",
+  "old": "57",
+  "new": 58,
+  "source": "https://www.sophia.org/online-courses/career-success/the-essentials-of-managing-conflict/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Workplace Writing I",
+  "field": "transfer_partners",
+  "old": "70",
+  "new": 71,
+  "source": "https://www.sophia.org/online-courses/career-success/workplace-writing-i/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Workplace Writing II",
+  "field": "challenges",
+  "old": "11",
+  "new": 10,
+  "source": "https://www.sophia.org/online-courses/career-success/workplace-writing-ii/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Workplace Writing II",
+  "field": "milestones",
+  "old": "4",
+  "new": 0,
+  "source": "https://www.sophia.org/online-courses/career-success/workplace-writing-ii/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Workplace Writing II",
+  "field": "touchstones",
+  "old": "2",
+  "new": 6,
+  "source": "https://www.sophia.org/online-courses/career-success/workplace-writing-ii/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Workplace Writing II",
+  "field": "transfer_partners",
+  "old": "75",
+  "new": 76,
+  "source": "https://www.sophia.org/online-courses/career-success/workplace-writing-ii/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Introduction to Java Programming",
+  "field": "challenges",
+  "old": "12",
+  "new": 11,
+  "source": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-java-programming/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Introduction to Java Programming",
+  "field": "milestones",
+  "old": "4",
+  "new": 3,
+  "source": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-java-programming/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Introduction to Java Programming",
+  "field": "touchstones",
+  "old": "0",
+  "new": 1,
+  "source": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-java-programming/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Introduction to Java Programming",
+  "field": "transfer_partners",
+  "old": "71",
+  "new": 72,
+  "source": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-java-programming/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Introduction to Networking",
+  "field": "challenges",
+  "old": "19",
+  "new": 15,
+  "source": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-networking/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Introduction to Python Programming",
+  "field": "challenges",
+  "old": "12",
+  "new": 11,
+  "source": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-python-programming/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Introduction to Relational Databases",
+  "field": "transfer_partners",
+  "old": "76",
+  "new": 77,
+  "source": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-relational-databases/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Introduction to Web Development",
+  "field": "challenges",
+  "old": "15",
+  "new": 10,
+  "source": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-web-development/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Introduction to Web Development",
+  "field": "transfer_partners",
+  "old": "76",
+  "new": 77,
+  "source": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-web-development/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "English Composition I",
+  "field": "transfer_partners",
+  "old": "102",
+  "new": 103,
+  "source": "https://www.sophia.org/online-courses/english-and-communication/english-composition-i/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "English Composition II",
+  "field": "transfer_partners",
+  "old": "101",
+  "new": 102,
+  "source": "https://www.sophia.org/online-courses/english-and-communication/english-composition-ii/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Public Speaking",
+  "field": "transfer_partners",
+  "old": "103",
+  "new": 104,
+  "source": "https://www.sophia.org/online-courses/english-and-communication/public-speaking/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Visual Communications",
+  "field": "transfer_partners",
+  "old": "85",
+  "new": 86,
+  "source": "https://www.sophia.org/online-courses/english-and-communication/visual-communications/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Workplace Communication",
+  "field": "transfer_partners",
+  "old": "85",
+  "new": 86,
+  "source": "https://www.sophia.org/online-courses/english-and-communication/workplace-communication/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Ancient Greek Philosophers",
+  "field": "transfer_partners",
+  "old": "89",
+  "new": 88,
+  "source": "https://www.sophia.org/online-courses/humanities/ancient-greek-philosophers/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Approaches to Studying Religions",
+  "field": "transfer_partners",
+  "old": "87",
+  "new": 88,
+  "source": "https://www.sophia.org/online-courses/humanities/approaches-to-studying-religions/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Art History I",
+  "field": "transfer_partners",
+  "old": "97",
+  "new": 98,
+  "source": "https://www.sophia.org/online-courses/humanities/art-history-i/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Art History II",
+  "field": "transfer_partners",
+  "old": "89",
+  "new": 90,
+  "source": "https://www.sophia.org/online-courses/humanities/art-history-ii/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Critical Thinking",
+  "field": "transfer_partners",
+  "old": "84",
+  "new": 85,
+  "source": "https://www.sophia.org/online-courses/humanities/critical-thinking/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "College Algebra",
+  "field": "transfer_partners",
+  "old": "103",
+  "new": 104,
+  "source": "https://www.sophia.org/online-courses/math/college-algebra/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Introduction to Statistics",
+  "field": "transfer_partners",
+  "old": "101",
+  "new": 102,
+  "source": "https://www.sophia.org/online-courses/math/introduction-to-statistics/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Precalculus",
+  "field": "challenges",
+  "old": "18",
+  "new": 17,
+  "source": "https://www.sophia.org/online-courses/math/precalculus/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Precalculus",
+  "field": "transfer_partners",
+  "old": "82",
+  "new": 83,
+  "source": "https://www.sophia.org/online-courses/math/precalculus/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Anatomy and Physiology I",
+  "field": "transfer_partners",
+  "old": "81",
+  "new": 82,
+  "source": "https://www.sophia.org/online-courses/science/anatomy-and-physiology-i/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Anatomy and Physiology II",
+  "field": "milestones",
+  "old": "5",
+  "new": 4,
+  "source": "https://www.sophia.org/online-courses/science/anatomy-and-physiology-ii/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Health, Fitness, and Wellness",
+  "field": "transfer_partners",
+  "old": "58",
+  "new": 55,
+  "source": "https://www.sophia.org/online-courses/science/health-fitness-and-wellness/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Human Biology",
+  "field": "transfer_partners",
+  "old": "99",
+  "new": 100,
+  "source": "https://www.sophia.org/online-courses/science/human-biology/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Introduction to Chemistry",
+  "field": "milestones",
+  "old": "5",
+  "new": 4,
+  "source": "https://www.sophia.org/online-courses/science/introduction-to-chemistry/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Introduction to Nutrition",
+  "field": "milestones",
+  "old": "5",
+  "new": 4,
+  "source": "https://www.sophia.org/online-courses/science/introduction-to-nutrition/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Microbiology",
+  "field": "transfer_partners",
+  "old": "81",
+  "new": 82,
+  "source": "https://www.sophia.org/online-courses/science/microbiology/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Introduction to Criminal Justice",
+  "field": "transfer_partners",
+  "old": "54",
+  "new": 55,
+  "source": "https://www.sophia.org/online-courses/social-science/introduction-to-criminal-justice/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Introduction to Psychology",
+  "field": "transfer_partners",
+  "old": "103",
+  "new": 104,
+  "source": "https://www.sophia.org/online-courses/social-science/introduction-to-psychology/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Introduction to Sociology",
+  "field": "transfer_partners",
+  "old": "103",
+  "new": 104,
+  "source": "https://www.sophia.org/online-courses/social-science/introduction-to-sociology/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Macroeconomics",
+  "field": "transfer_partners",
+  "old": "96",
+  "new": 98,
+  "source": "https://www.sophia.org/online-courses/social-science/macroeconomics/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Microeconomics",
+  "field": "transfer_partners",
+  "old": "96",
+  "new": 97,
+  "source": "https://www.sophia.org/online-courses/social-science/microeconomics/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "U.S. History I",
+  "field": "transfer_partners",
+  "old": "98",
+  "new": 99,
+  "source": "https://www.sophia.org/online-courses/social-science/us-history-i/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "U.S. History II",
+  "field": "transfer_partners",
+  "old": "97",
+  "new": 98,
+  "source": "https://www.sophia.org/online-courses/social-science/us-history-ii/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Anatomy and Physiology I Lab",
+  "field": "transfer_partners",
+  "old": "64",
+  "new": 65,
+  "source": "https://www.sophia.org/online-courses/science/anatomy-and-physiology-i-lab/"
+ },
+ {
+  "date": "2026-07-31",
+  "course": "Microbiology Lab",
+  "field": "transfer_partners",
+  "old": "65",
+  "new": 66,
+  "source": "https://www.sophia.org/online-courses/science/microbiology-lab/"
+ }
+]
