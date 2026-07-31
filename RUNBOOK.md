@@ -35,48 +35,42 @@ scripts/verify_sophia.py
 reports/                        # generated each run; gitignore if you like
 ```
 
-## One-time setup (~1 hour, laptop)
+## One-time setup — DONE (completed 2026-07-31)
 
-1. **Export the courses tab** of your Sheet as CSV → commit as
-   `data/courses.csv`. Keep your existing columns; the script matches on
-   `course_name` and will add a `sophia_slug` column on its first PR so all
-   later runs join exactly, not fuzzily.
-2. **Re-plumb the site**: in `index.html`, change the courses fetch URL from the
-   Sheets-published CSV to `data/courses.csv` (relative path — same origin on
-   GitHub Pages, PapaParse unchanged). Ratings keep loading from Sheets.
-   The old `snapshot.json` fallback can stay or be retired.
-3. Copy `scripts/`, `.github/workflows/verify.yml` into the repo; commit.
-4. Repo **Settings → Actions → General → Workflow permissions**: select
-   "Read and write permissions" and check **"Allow GitHub Actions to create and
-   approve pull requests"** (the PR step fails without this).
-5. **Phone**: install GitHub Mobile, sign in, allow push notifications, and
-   Watch the repo (All activity, or Custom → Issues + Pull requests).
-6. Optional but recommended: create a free check at healthchecks.io
+Already in place: courses + labs exported to `data/*.csv` (values identical to
+the Sheet that day); `index.html` re-plumbed (ratings still load from the
+Sheet); pipeline committed; Actions granted write + PR permissions; the first
+backlog-cleanup PR opened; live site verified working on the new plumbing.
+
+Still yours to do (10 minutes, all on the phone):
+
+1. **Install GitHub Mobile**, sign in, allow push notifications, and Watch the
+   `Beantheben/sophiaindex` repo (All activity, or Custom → Issues + Pull
+   requests). This is how the daily robot reaches you.
+2. **Treat the Sheet's courses & labs tabs as retired** (rename them
+   `courses_LEGACY` / `labs_LEGACY`). Editing them no longer changes the site —
+   course facts now change only through GitHub. The ratings tab stays live.
+3. Optional but recommended: create a free check at healthchecks.io
    (schedule: 1 day, grace: 12 h) and save its ping URL as repo secret
-   `HEALTHCHECK_URL`. It emails you if the daily run ever stops happening —
-   this covers GitHub's 60-day scheduled-workflow disable AND silent cron drift.
-   (The workflow also self-mitigates with a monthly heartbeat commit.)
-7. **Mark the Sheet's courses tab read-only for yourself** (rename it
-   `courses_LEGACY`). From now on, course facts change only via git.
+   `HEALTHCHECK_URL` (Settings → Secrets and variables → Actions). It emails
+   you if the daily run ever stops happening — covers GitHub's 60-day
+   scheduled-workflow disable AND silent cron drift. (The workflow also
+   self-mitigates with a monthly heartbeat commit.)
 
-## First backlog cleanup (the 61 pixel-derived rows)
+## First backlog cleanup — PR #1 (awaiting your merge)
 
-0. Optional smoke test (any machine with Python, or a codespace):
-   `python scripts/verify_sophia.py --csv data/courses.csv --limit 5` — checks
-   5 pages, writes a report, refuses to touch the CSV. Ignore the "removed
-   courses" section on limited runs; unfetched courses land there.
-1. Actions tab → **Verify course data** → *Run workflow* (works from mobile
-   web, but do this first one on a laptop).
-2. Runtime ≈ 4 min (82 pages × 1.5 s + overhead). The run opens **one PR**
-   containing every high-confidence correction, the new `sophia_slug` column,
-   `changelog.json` entries, and the parse snapshot. Expect a big diff — this
-   is the one PR worth reviewing on a real screen. Spot-check a handful of
-   evidence sentences against the linked pages.
-3. Anything the parser wasn't sure about (weak parses, unmatched names, the 5
-   lab courses if their columns don't line up) lands in a separate **issue**,
-   never in the PR. Resolve those by hand-editing `data/courses.csv` in the
-   GitHub web editor, citing the course page.
-4. Merge. GitHub Pages redeploys automatically; the site is correct ~30 s later.
+The full 82-page verification ran 2026-07-31: every page parsed with high
+confidence, zero errors. Result: **59 corrections across 45 courses**, waiting
+in [PR #1](https://github.com/Beantheben/sophiaindex/pull/1). Each row of the
+PR table links to the Sophia page and quotes the sentence it was read from.
+Merging it puts the corrected numbers on the live site ~30 s later.
+
+Two courses were deliberately NOT auto-corrected (see the PR body): Personal
+Finance and Medical Terminology, where Sophia's sentence says "1 Touchstone
+Task and 1 Touchstone" — whether a Touchstone *Task* counts as a touchstone on
+the site is an editorial call. Your CSV currently counts both (value 2). Expect the
+daily run to raise these once as a review issue after the merge; close it to
+acknowledge, and it stays quiet unless the finding itself changes.
 
 ## What happens each time it fires (steady state)
 
