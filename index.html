@@ -341,9 +341,15 @@ function applyData(courses,labs,ratings){
     S.ratings[r.course_name.trim()] = {h:parseFloat(r.median_hours), d:parseFloat(r.median_difficulty), n:parseInt(r.n,10)||0};
   });
   var dates = S.courses.concat(S.labs).map(function(r){return r.last_verified;}).filter(Boolean).sort();
-    fetch("data/verified.txt").then(function(r){return r.text();})
-    .then(function(t){document.getElementById("mVerified").textContent=t.trim();})
-    .catch(function(){document.getElementById("mVerified").textContent=dates[dates.length-1]||"—";});
+      var fallbackDate = dates[dates.length-1]||"—";
+  document.getElementById("mVerified").textContent = fallbackDate;
+  fetch("data/verified.txt").then(function(r){
+    if(!r.ok) throw new Error("no file");
+    return r.text();
+  }).then(function(t){
+    t = t.trim();
+    if(/^\d{4}-\d{2}-\d{2}$/.test(t)) document.getElementById("mVerified").textContent = t;
+  }).catch(function(){});
 
   var total=S.courses.length+S.labs.length, rep=0;
   S.courses.concat(S.labs).forEach(function(r){var g=S.ratings[r.course_name]; if(g&&g.n>0) rep++;});
