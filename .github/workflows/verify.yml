@@ -100,6 +100,20 @@ jobs:
       # ----- keep the scheduled workflow alive past GitHub's 60-day idle cutoff -----
       # A merge commit resets the clock, but quiet months don't. Touch a heartbeat
       # file on main when it's >25 days stale.
+      - name: Stamp verification date
+        if: success() && steps.verify.outputs.outcome != 'broken'
+        run: |
+          git checkout main 2>/dev/null || git checkout master
+          git pull --ff-only
+          date -u +%F > data/verified.txt
+          if ! git diff --quiet data/verified.txt; then
+            git config user.name  "sophiaindex-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add data/verified.txt
+            git commit -m "Verified against sophia.org"
+            git push
+          fi
+
       - name: Heartbeat commit
         if: success()
         run: |
