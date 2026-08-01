@@ -193,16 +193,14 @@
    "challenges": 19,
    "milestones": 5,
    "touchstone_tasks": 1,
-   "touchstones": 1
+   "touchstones": 2
   },
   "extras": {
    "credits": 3.0,
    "transfer_partners": 75
   },
   "confident": true,
-  "ambiguous_fields": [
-   "touchstones"
-  ],
+  "ambiguous_fields": [],
   "schema": "standard",
   "evidence": " You must complete 19 Challenges (formative assessments), 5 Milestones (summative assessments), and 1 Touchstone Task and 1 Touchstone (project-based or written assessments) with an overall score of 7"
  },
@@ -519,16 +517,14 @@
    "challenges": 15,
    "milestones": 6,
    "touchstone_tasks": 4,
-   "touchstones": 1
+   "touchstones": 5
   },
   "extras": {
    "credits": 3.0,
    "transfer_partners": 66
   },
   "confident": true,
-  "ambiguous_fields": [
-   "touchstones"
-  ],
+  "ambiguous_fields": [],
   "schema": "standard",
   "evidence": " You must complete 15 Challenges (formative assessments), 6 Milestones (summative assessments), and 4 Touchstone Tasks and 1 Touchstone (project-based or written assessments) with an overall score of "
  },
@@ -573,16 +569,14 @@
    "challenges": 10,
    "milestones": 3,
    "touchstone_tasks": 5,
-   "touchstones": 1
+   "touchstones": 6
   },
   "extras": {
    "credits": 3.0,
    "transfer_partners": 77
   },
   "confident": true,
-  "ambiguous_fields": [
-   "touchstones"
-  ],
+  "ambiguous_fields": [],
   "schema": "standard",
   "evidence": " You must complete 10 Challenges (formative assessments), 3 Milestones (summative assessments), and 5 Touchstone Tasks and 1 Touchstone (project-based or written assessments) with an overall score of "
  },
@@ -695,16 +689,14 @@
    "challenges": 4,
    "milestones": 1,
    "touchstone_tasks": 1,
-   "touchstones": 2
+   "touchstones": 3
   },
   "extras": {
    "credits": 3.0,
    "transfer_partners": 88
   },
   "confident": true,
-  "ambiguous_fields": [
-   "touchstones"
-  ],
+  "ambiguous_fields": [],
   "schema": "standard",
   "evidence": " You must complete 4 Challenges (formative assessments), 1 Milestone (summative assessment), and 1 Touchstone Tasks and 2 Touchstones (project-based or written assessment) with an overall score of 70%"
  },
@@ -1161,16 +1153,14 @@
    "challenges": 21,
    "milestones": 7,
    "touchstone_tasks": 1,
-   "touchstones": 1
+   "touchstones": 2
   },
   "extras": {
    "credits": 3.0,
    "transfer_partners": 35
   },
   "confident": true,
-  "ambiguous_fields": [
-   "touchstones"
-  ],
+  "ambiguous_fields": [],
   "schema": "standard",
   "evidence": " You must complete 21 Challenges (formative assessments), 7 Milestones (summative assessments), and 1 Touchstone Task and 1 Touchstone (project-based or written assessments) with an overall score of 7"
  },
