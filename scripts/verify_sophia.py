@@ -146,9 +146,12 @@ def parse_page(html):
             if field and val is not None and field not in counts:
                 counts[field] = val
 
-    # "N Touchstone Tasks and M Touchstones": whether tasks count as
-    # touchstones is a human convention call — never auto-apply that field
-    ambiguous = ["touchstones"] if counts.get("touchstone_tasks") else []
+       # Convention (sophiaindex): a Touchstone Task is a submitted deliverable,
+    # so it counts toward the touchstone total. 1 Task + 1 Touchstone = 2.
+    if counts.get("touchstone_tasks"):
+        counts["touchstones"] = counts.get("touchstones", 0) + counts["touchstone_tasks"]
+    ambiguous = []
+
 
     # Zero-inference: an explicit requirements sentence that omits a type means
     # zero of that type — but only within the schema family the sentence uses.
