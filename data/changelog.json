@@ -470,5 +470,29 @@
   "old": "65",
   "new": 66,
   "source": "https://www.sophia.org/online-courses/science/microbiology-lab/"
+ },
+ {
+  "date": "2026-08-01",
+  "course": "Introduction to Networking",
+  "field": "touchstones",
+  "old": "1",
+  "new": 5,
+  "source": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-networking/"
+ },
+ {
+  "date": "2026-08-01",
+  "course": "Introduction to Web Development",
+  "field": "touchstones",
+  "old": "1",
+  "new": 6,
+  "source": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-web-development/"
+ },
+ {
+  "date": "2026-08-01",
+  "course": "Ancient Greek Philosophers",
+  "field": "touchstones",
+  "old": "2",
+  "new": 3,
+  "source": "https://www.sophia.org/online-courses/humanities/ancient-greek-philosophers/"
  }
 ]

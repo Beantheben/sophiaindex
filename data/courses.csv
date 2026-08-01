@@ -29,17 +29,17 @@ CS0050,SOPH-0093,Computer Applications,2026-07-24,1,Computer Science and IT,N,2,
 CS0060,SOPH-0097,Digital Literacy,2026-07-24,1,Computer Science and IT,N,2,6,1,0,2,N,70,11,digital-literacy
 CS1001,SOPH-0023,Introduction to Information Technology,2026-07-24,3,Computer Science and IT,N,4,11,1,0,5,Y,70,90,introduction-to-information-technology
 CS1101,SOPH-0062,Introduction to Java Programming,2026-07-31,3,Computer Science and IT,N,4,11,1,0,3,N,70,72,introduction-to-java-programming
-CS1015,SOPH-0068,Introduction to Networking,2026-07-31,3,Computer Science and IT,N,5,15,1,0,6,Y,70,66,introduction-to-networking
+CS1015,SOPH-0068,Introduction to Networking,2026-08-01,3,Computer Science and IT,N,5,15,5,0,6,Y,70,66,introduction-to-networking
 CS1100,SOPH-0058,Introduction to Python Programming,2026-07-31,3,Computer Science and IT,N,4,11,1,0,3,N,70,71,introduction-to-python-programming
 CS1011,SOPH-0047,Introduction to Relational Databases,2026-07-31,3,Computer Science and IT,N,5,19,0,0,6,Y,70,77,introduction-to-relational-databases
-CS1005,SOPH-0043,Introduction to Web Development,2026-07-31,3,Computer Science and IT,N,3,10,1,0,3,N,70,77,introduction-to-web-development
+CS1005,SOPH-0043,Introduction to Web Development,2026-08-01,3,Computer Science and IT,N,3,10,6,0,3,N,70,77,introduction-to-web-development
 ENG1001,SOPH-0015,English Composition I,2026-07-31,3,English and Communication,N,4,14,5,0,0,N,70,103,english-composition-i
 ENG1002,SOPH-0030,English Composition II,2026-07-31,3,English and Communication,N,4,9,7,0,0,N,70,102,english-composition-ii
 ENG0050,SOPH-0019,Foundations of English Composition,2026-07-24,3,English and Communication,N,4,8,3,0,4,N,70,49,foundations-of-english-composition
 COMM1002,SOPH-0024,Public Speaking,2026-07-31,3,English and Communication,N,5,14,4,0,5,N,70,104,public-speaking
 COMM1005,SOPH-0009,Visual Communications,2026-07-31,3,English and Communication,N,4,11,1,0,5,Y,70,86,visual-communications
 COMM1010,SOPH-0034,Workplace Communication,2026-07-31,3,English and Communication,N,4,12,2,0,3,N,70,86,workplace-communication
-PHIL1001,SOPH-0027,Ancient Greek Philosophers,2026-07-31,3,Humanities,N,1,4,2,0,1,N,70,88,ancient-greek-philosophers
+PHIL1001,SOPH-0027,Ancient Greek Philosophers,2026-08-01,3,Humanities,N,1,4,3,0,1,N,70,88,ancient-greek-philosophers
 REL1001,SOPH-0008,Approaches to Studying Religions,2026-07-31,3,Humanities,N,3,15,3,0,4,Y,70,88,approaches-to-studying-religions
 ArtHist1001,SOPH-0006,Art History I,2026-07-31,3,Humanities,N,4,16,1,0,5,Y,70,98,art-history-i
 HUMA1012,SOPH-0029,Art History II,2026-07-31,3,Humanities,N,4,14,1,0,5,Y,70,90,art-history-ii
