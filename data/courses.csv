@@ -36,9 +36,9 @@ CS1005,SOPH-0043,Introduction to Web Development,2026-08-01,3,Computer Science a
 ENG1001,SOPH-0015,English Composition I,2026-07-31,3,English and Communication,N,4,14,5,0,0,N,70,103,english-composition-i
 ENG1002,SOPH-0030,English Composition II,2026-07-31,3,English and Communication,N,4,9,7,0,0,N,70,102,english-composition-ii
 ENG0050,SOPH-0019,Foundations of English Composition,2026-07-24,3,English and Communication,N,4,8,3,0,4,N,70,49,foundations-of-english-composition
-COMM1002,SOPH-0024,Public Speaking,2026-07-31,3,English and Communication,N,5,14,4,0,5,N,70,104,public-speaking
+COMM1002,SOPH-0024,Public Speaking,2026-08-03,3,English and Communication,N,5,14,5,0,5,N,70,104,public-speaking
 COMM1005,SOPH-0009,Visual Communications,2026-07-31,3,English and Communication,N,4,11,1,0,5,Y,70,86,visual-communications
-COMM1010,SOPH-0034,Workplace Communication,2026-07-31,3,English and Communication,N,4,12,2,0,3,N,70,86,workplace-communication
+COMM1010,SOPH-0034,Workplace Communication,2026-08-03,3,English and Communication,N,4,12,3,0,4,N,70,86,workplace-communication
 PHIL1001,SOPH-0027,Ancient Greek Philosophers,2026-08-01,3,Humanities,N,1,4,3,0,1,N,70,88,ancient-greek-philosophers
 REL1001,SOPH-0008,Approaches to Studying Religions,2026-07-31,3,Humanities,N,3,15,3,0,4,Y,70,88,approaches-to-studying-religions
 ArtHist1001,SOPH-0006,Art History I,2026-07-31,3,Humanities,N,4,16,1,0,5,Y,70,98,art-history-i

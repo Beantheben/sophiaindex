@@ -637,7 +637,7 @@
   "counts": {
    "challenges": 14,
    "milestones": 5,
-   "touchstones": 4
+   "touchstones": 5
   },
   "extras": {
    "credits": 3.0,
@@ -646,7 +646,7 @@
   "confident": true,
   "ambiguous_fields": [],
   "schema": "standard",
-  "evidence": " You must complete 14 Challenges (formative assessments), 5 Milestones (summative assessments), and 4 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+  "evidence": " You must complete 14 Challenges (formative assessments), 5 Milestones (summative assessments), and 5 Touchstones (project-based or written assessments) with an overall score of 70% or better."
  },
  "visual-communications": {
   "url": "https://www.sophia.org/online-courses/english-and-communication/visual-communications/",
@@ -670,8 +670,8 @@
   "name": "Workplace Communication",
   "counts": {
    "challenges": 12,
-   "milestones": 3,
-   "touchstones": 2
+   "milestones": 4,
+   "touchstones": 3
   },
   "extras": {
    "credits": 3.0,
@@ -680,7 +680,7 @@
   "confident": true,
   "ambiguous_fields": [],
   "schema": "standard",
-  "evidence": " You must complete 12 Challenges (formative assessments), 3 Milestones (summative assessments), and 2 Touchstones (project-based or written assessment) with an overall score of 70% or better."
+  "evidence": " You must complete 12 Challenges (formative assessments), 4 Milestones (summative assessments), and 3 Touchstones (project-based or written assessment) with an overall score of 70% or better."
  },
  "ancient-greek-philosophers": {
   "url": "https://www.sophia.org/online-courses/humanities/ancient-greek-philosophers/",
@@ -1367,7 +1367,7 @@
   "confident": true,
   "ambiguous_fields": [],
   "schema": "standard",
-  "evidence": " You must complete 17 Challenges (formative assessments), 5 Milestones (summative assessments), and 2 Touchstones (project-based or written assessments) with an overall score of 70% or better."
+  "evidence": " Students must complete 17 Challenges (formative assessments), 5 Milestones (summative assessments), and 2 Touchstones (project-based or written assessments) with an overall score of 70% or better."
  },
  "us-history-i": {
   "url": "https://www.sophia.org/online-courses/social-science/us-history-i/",
