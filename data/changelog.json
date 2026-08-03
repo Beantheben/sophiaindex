@@ -494,5 +494,29 @@
   "old": "2",
   "new": 3,
   "source": "https://www.sophia.org/online-courses/humanities/ancient-greek-philosophers/"
+ },
+ {
+  "date": "2026-08-03",
+  "course": "Public Speaking",
+  "field": "touchstones",
+  "old": "4",
+  "new": 5,
+  "source": "https://www.sophia.org/online-courses/english-and-communication/public-speaking/"
+ },
+ {
+  "date": "2026-08-03",
+  "course": "Workplace Communication",
+  "field": "milestones",
+  "old": "3",
+  "new": 4,
+  "source": "https://www.sophia.org/online-courses/english-and-communication/workplace-communication/"
+ },
+ {
+  "date": "2026-08-03",
+  "course": "Workplace Communication",
+  "field": "touchstones",
+  "old": "2",
+  "new": 3,
+  "source": "https://www.sophia.org/online-courses/english-and-communication/workplace-communication/"
  }
 ]
