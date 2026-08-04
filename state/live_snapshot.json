@@ -566,10 +566,10 @@
   "url": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-web-development/",
   "name": "Introduction to Web Development",
   "counts": {
-   "challenges": 10,
-   "milestones": 3,
-   "touchstone_tasks": 5,
-   "touchstones": 6
+   "challenges": 15,
+   "milestones": 6,
+   "touchstone_tasks": 1,
+   "touchstones": 4
   },
   "extras": {
    "credits": 3.0,
@@ -578,7 +578,7 @@
   "confident": true,
   "ambiguous_fields": [],
   "schema": "standard",
-  "evidence": " You must complete 10 Challenges (formative assessments), 3 Milestones (summative assessments), and 5 Touchstone Tasks and 1 Touchstone (project-based or written assessments) with an overall score of "
+  "evidence": " You must complete 15 Challenges (formative assessments), 6 Milestones (summative assessments), and 1 Touchstone Task and 3 Touchstones (project-based or written assessments) with an overall score of "
  },
  "english-composition-i": {
   "url": "https://www.sophia.org/online-courses/english-and-communication/english-composition-i/",

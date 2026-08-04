@@ -518,5 +518,29 @@
   "old": "2",
   "new": 3,
   "source": "https://www.sophia.org/online-courses/english-and-communication/workplace-communication/"
+ },
+ {
+  "date": "2026-08-04",
+  "course": "Introduction to Web Development",
+  "field": "challenges",
+  "old": "10",
+  "new": 15,
+  "source": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-web-development/"
+ },
+ {
+  "date": "2026-08-04",
+  "course": "Introduction to Web Development",
+  "field": "milestones",
+  "old": "3",
+  "new": 6,
+  "source": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-web-development/"
+ },
+ {
+  "date": "2026-08-04",
+  "course": "Introduction to Web Development",
+  "field": "touchstones",
+  "old": "6",
+  "new": 4,
+  "source": "https://www.sophia.org/online-courses/computer-science-and-it/introduction-to-web-development/"
  }
 ]
