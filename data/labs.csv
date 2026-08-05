@@ -1,6 +1,6 @@
 course_code,ace_id,course_name,last_verified,credits,retired,units,lessons,activities,touchstones,pass_threshold,transfer_partners,sophia_slug
-SCIE1051,SOPH-0072,Anatomy and Physiology I Lab,2026-07-31,1,N,5,3,13,2,70,65,anatomy-and-physiology-i-lab
-SCIE1056,SOPH-0082,Anatomy and Physiology II Lab,2026-07-24,1,N,5,3,15,2,70,57,anatomy-and-physiology-ii-lab
-SCIE1021,SOPH-0067,Human Biology Lab,2026-07-24,1,N,7,5,14,2,70,67,human-biology-lab
-SCIE1031,SOPH-0070,Introduction to Chemistry Lab,2026-07-24,1,N,5,3,15,2,70,67,introduction-to-chemistry-lab
-SCIE1046,SOPH-0075,Microbiology Lab,2026-07-31,1,N,6,5,15,2,70,66,microbiology-lab
+SCIE1051,SOPH-0072,Anatomy and Physiology I Lab,2026-08-05,1,N,5,3,13,2,70,66,anatomy-and-physiology-i-lab
+SCIE1056,SOPH-0082,Anatomy and Physiology II Lab,2026-08-05,1,N,5,3,15,2,70,58,anatomy-and-physiology-ii-lab
+SCIE1021,SOPH-0067,Human Biology Lab,2026-08-05,1,N,7,5,14,2,70,68,human-biology-lab
+SCIE1031,SOPH-0070,Introduction to Chemistry Lab,2026-08-05,1,N,5,3,15,2,70,68,introduction-to-chemistry-lab
+SCIE1046,SOPH-0075,Microbiology Lab,2026-08-05,1,N,6,5,15,2,70,67,microbiology-lab
