@@ -77,7 +77,7 @@ jobs:
           fi
           git config user.name  "sophiaindex-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add state/report_hash.txt
+          git add state/report_hash.txt data/changelog.json
           git commit -m "Record review-report hash (dedupe daily alerts)"
           git push
 
