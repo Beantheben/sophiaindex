@@ -61,7 +61,9 @@ CATALOG_URL = "https://www.sophia.org/online-courses/all-courses/"
 BASE = "https://www.sophia.org"
 UA = "sophiaindex-verifier/1.0 (+https://sophiaindex.org; contact sophiaindexinfo@gmail.com)"
 DELAY = 1.5          # seconds between requests — be polite
-TIMEOUT = 25
+TIMEOUT = 45         # was 25; Sophia stalls past 25s under load
+RETRIES = 3          # attempts per URL (1 initial + 2 retries)
+BACKOFF = 5          # seconds before first retry; doubles each time
 MIN_CATALOG = 70     # fewer catalog URLs than this = template change = broken
 MAX_ERROR_FRAC = 0.2 # >20% of pages erroring/unparseable = broken
 
@@ -189,10 +191,32 @@ def parse_page(html):
     }
 
 
+def get(session, url):
+    """GET with retries. Retries timeouts, connection errors and 5xx.
+    4xx (404 etc.) fails immediately — retrying a dead URL is pointless."""
+    last = None
+    for attempt in range(1, RETRIES + 1):
+        try:
+            r = session.get(url, timeout=TIMEOUT)
+        except (requests.Timeout, requests.ConnectionError) as e:
+            last = e
+        else:
+            if r.status_code < 400:
+                return r
+            if r.status_code < 500:
+                r.raise_for_status()          # permanent — give up now
+            last = requests.HTTPError(f"{r.status_code} Server Error: {url}")
+        if attempt < RETRIES:
+            wait = BACKOFF * (2 ** (attempt - 1))
+            print(f"       retry {attempt}/{RETRIES - 1} in {wait}s "
+                  f"— {last.__class__.__name__}")
+            time.sleep(wait)
+    raise last
+
+
 def scrape_catalog(session):
     """Return {slug: {"url":..., "name":...}} from the public catalog."""
-    r = session.get(CATALOG_URL, timeout=TIMEOUT)
-    r.raise_for_status()
+    r = get(session, CATALOG_URL)
     soup = BeautifulSoup(r.text, "html.parser")
 
     found = {}
@@ -232,8 +256,7 @@ def fetch_all(limit=0):
         url = catalog[slug]["url"]
         entry = {"url": url, "name": catalog[slug]["name"]}
         try:
-            r = session.get(url, timeout=TIMEOUT)
-            r.raise_for_status()
+            r = get(session, url)
             entry.update(parse_page(r.text))
             flag = "" if entry["confident"] else "  [weak parse]"
             print(f"  [{i:>2}/{len(slugs)}] {slug[:40]:42} {entry['counts']}{flag}")
@@ -357,6 +380,42 @@ def apply_corrections(local_rows, fieldnames, findings, matches, live, slug_col)
     return fieldnames, applied
 
 
+
+def log_course_events(log, today, new_courses, removed, live, prev_live):
+    """Append course_added / course_removed entries to the public changelog.
+
+    Guarded against transient catalog hiccups. A course is logged as ADDED only
+    on its first sighting (absent from the previous run's snapshot), and as
+    REMOVED only when it is missing from the previous snapshot too — i.e. two
+    consecutive misses. One flaky catalog scrape must never publish the claim
+    that Sophia dropped a course."""
+    already = {(e.get("course"), e.get("type")) for e in log if e.get("type")}
+    for slug in new_courses:
+        if slug in prev_live:
+            continue
+        entry = live.get(slug) or {}
+        if "error" in entry:
+            continue
+        name = entry.get("name") or slug.replace("-", " ").title()
+        if (name, "course_added") in already:
+            continue
+        already.add((name, "course_added"))
+        c = entry.get("counts") or {}
+        note = ", ".join(f"{c[k]} {k}" for k in
+                         ("challenges", "milestones", "touchstones") if c.get(k))
+        log.append({"date": today, "course": name, "type": "course_added",
+                    "note": note, "source": entry.get("url", "")})
+    prev_names = {norm(e.get("name", s)) for s, e in prev_live.items()}
+    for name in removed:
+        if norm(name) in prev_names:
+            continue
+        if (name, "course_removed") in already:
+            continue
+        already.add((name, "course_removed"))
+        log.append({"date": today, "course": name, "type": "course_removed",
+                    "note": "", "source": ""})
+
+
 def write_report(path, findings, new, removed, live, n_weak_pages, proposed):
     today = datetime.date.today().isoformat()
     conf = [f for f in findings if f["confident"]]
@@ -464,6 +523,17 @@ def main():
                              "rows": list(reader)})
         print(f"local rows ({path}): {len(datasets[-1]['rows'])}")
 
+    # Previous run's snapshot, read before this run overwrites it. In --offline
+    # mode `live` IS that snapshot, so there is no "previous" to compare with
+    # and it must stay empty or every guard below would suppress everything.
+    prev_live = {}
+    if not args.offline and os.path.exists(snap_path):
+        try:
+            with open(snap_path, encoding="utf-8") as fh:
+                prev_live = json.load(fh)
+        except Exception:
+            prev_live = {}
+
     if args.offline:
         with open(snap_path, encoding="utf-8") as fh:
             live = json.load(fh)
@@ -489,7 +559,7 @@ def main():
         removed += rem
         all_matched |= set(matches.values())
     # "new on Sophia" only counts courses missing from EVERY local file
-    new = [s for s in live if s not in all_matched]
+    new_courses = [s for s in live if s not in all_matched]
     n_weak_pages = sum(1 for e in live.values()
                        if "error" not in e and not e.get("confident"))
 
@@ -503,8 +573,8 @@ def main():
         w.writerows(findings)
 
     proposed = False
+    count_changes = []
     if args.propose:
-        count_changes = []
         for ds in datasets:
             fieldnames, applied = apply_corrections(
                 ds["rows"], ds["fieldnames"], ds["findings"], ds["matches"],
@@ -517,24 +587,33 @@ def main():
                 w.writeheader()
                 w.writerows(ds["rows"])
             count_changes += [a for a in applied if a["type"] == "count"]
-        if count_changes:
+    # Changelog is written on EVERY run, not just correction runs: a day with
+    # zero count changes but a new course on Sophia still needs to reach the
+    # site so it can flag the missing row.
+    log = []
+    if os.path.exists(changelog_path):
+        try:
+            with open(changelog_path, encoding="utf-8") as fh:
+                log = json.load(fh)
+        except Exception:
             log = []
-            if os.path.exists(changelog_path):
-                with open(changelog_path, encoding="utf-8") as fh:
-                    log = json.load(fh)
-            today = datetime.date.today().isoformat()
-            for a in count_changes:
-                log.append({"date": today, "course": a["course_name"],
-                            "field": a["field"], "old": a["csv_value"],
-                            "new": a["sophia_value"], "source": a["url"]})
-            os.makedirs(os.path.dirname(changelog_path), exist_ok=True)
-            with open(changelog_path, "w", encoding="utf-8") as fh:
-                json.dump(log, fh, indent=1)
+    before = len(log)
+    today = datetime.date.today().isoformat()
+    for a in count_changes:
+        log.append({"date": today, "course": a["course_name"],
+                    "field": a["field"], "old": a["csv_value"],
+                    "new": a["sophia_value"], "source": a["url"]})
+    log_course_events(log, today, new_courses, removed, live, prev_live)
+    if len(log) != before:
+        os.makedirs(os.path.dirname(changelog_path), exist_ok=True)
+        with open(changelog_path, "w", encoding="utf-8") as fh:
+            json.dump(log, fh, indent=1)
+        print(f"changelog: +{len(log) - before} entr(y/ies)")
 
-    write_report(report_path, findings, new, removed, live, n_weak_pages, proposed)
+    write_report(report_path, findings, new_courses, removed, live, n_weak_pages, proposed)
 
     n_conf = sum(1 for f in findings if f["confident"])
-    n_review = (len(findings) - n_conf) + len(new) + len(removed) + n_weak_pages
+    n_review = (len(findings) - n_conf) + len(new_courses) + len(removed) + n_weak_pages
     changed = report_hash_changed()
     if proposed or (n_conf and not args.propose):
         emit("changes", n_conf, n_review, changed)
