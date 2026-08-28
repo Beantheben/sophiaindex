@@ -160,6 +160,38 @@ footer.site .sep{margin:0 8px;opacity:.5}
   .controls input[type=search]{max-width:none}
   .tier{grid-template-columns:48px 1fr}
 }
+
+/* ---------- updates dialog ---------- */
+.updbtn{background:none;border:1px solid var(--border);color:var(--muted);font:600 12px var(--sans);padding:5px 11px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.updbtn:hover{color:var(--text);border-color:var(--teal-dim)}
+.updbtn .dotnew{width:6px;height:6px;border-radius:50%;background:var(--teal);display:none;flex:none}
+.updbtn.fresh .dotnew{display:block}
+.updbtn.todo{border-color:var(--amber);color:var(--amber)}
+.updbtn.todo .dotnew{background:var(--amber);display:block}
+#updates{max-width:560px}
+.u-body{padding:4px 20px 18px;max-height:min(66vh,560px);overflow:auto}
+.u-intro{font-size:12.5px;color:var(--muted);padding:12px 0 2px;line-height:1.5}
+.u-todo{margin:12px 0 2px;padding:11px 13px;border:1px solid var(--amber);border-radius:10px;background:rgba(217,164,65,.07);font-size:13px;line-height:1.5}
+.u-todo b{color:var(--amber)}
+.u-todo ul{margin:7px 0 0;padding-left:18px}
+.u-todo li{margin:3px 0}
+.u-day{margin:16px 0 0}
+.u-date{font:600 12px var(--mono);color:var(--teal);letter-spacing:.02em;padding:0 0 7px;border-bottom:1px solid var(--border)}
+.u-item{display:flex;gap:10px;align-items:baseline;padding:9px 0;border-bottom:1px solid rgba(45,47,47,.55);font-size:13.5px}
+.u-item:last-child{border-bottom:0}
+.u-course{flex:1;min-width:0}
+.u-course a{color:var(--text)}
+.u-course a:hover{color:var(--teal)}
+.u-what{color:var(--muted);font-size:12.5px;display:block;margin-top:1px}
+.u-delta{font:600 12px var(--mono);white-space:nowrap}
+.u-old{color:var(--muted);text-decoration:line-through}
+.u-arrow{color:var(--muted);margin:0 4px}
+.u-up{color:var(--amber)}
+.u-down{color:var(--teal)}
+.u-tag{font:600 10px var(--sans);letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:999px;border:1px solid var(--teal-dim);color:var(--teal);white-space:nowrap}
+.u-tag.rm{border-color:#7a4a4a;color:#c98b8b}
+.u-empty{color:var(--muted);font-size:13.5px;padding:16px 0;line-height:1.55}
+.u-foot{padding:12px 20px;border-top:1px solid var(--border);font-size:11.5px;color:var(--muted);line-height:1.5}
 </style>
 </head>
 <body>
@@ -169,6 +201,7 @@ footer.site .sep{margin:0 8px;opacity:.5}
     <div class="hrow">
       <span class="wordmark">sophia<span class="dot">·</span>index</span>
       <span class="meta">verified <b id="mVerified">—</b></span>
+      <button id="btnUpdates" class="updbtn" type="button" aria-haspopup="dialog"><span class="dotnew"></span>Updates</button>
       <span class="meta">community hours: <b id="mReported">0/82</b> courses reported</span>
       <span class="spacer"></span>
      <a class="contactlink" href="mailto:sophiaindexinfo@gmail.com">Contact</a>
@@ -262,6 +295,7 @@ footer.site .sep{margin:0 8px;opacity:.5}
 </main>
 
 <dialog id="detail"></dialog>
+<dialog id="updates"></dialog>
 
 <footer class="site">
   <div class="wrap">
@@ -282,7 +316,7 @@ var FORM = "https://docs.google.com/forms/d/e/1FAIpQLSeCgZEcIdpkciqUYulAbGvjPtCQ
 var PREFILL = FORM + "?usp=pp_url&entry.850100469=";
 var LOWQ = 54; // bottom-quintile partner warning threshold
 
-var S = {courses:[],labs:[],ratings:{},sortK:"course_name",sortDir:1,labSortK:"course_name",labSortDir:1,cached:null};
+var S = {courses:[],labs:[],ratings:{},sortK:"course_name",sortDir:1,labSortK:"course_name",labSortDir:1,cached:null,changelog:null};
 
 document.getElementById("rateTop").href = FORM;
 
@@ -354,7 +388,7 @@ function applyData(courses,labs,ratings){
   var total=S.courses.length+S.labs.length, rep=0;
   S.courses.concat(S.labs).forEach(function(r){var g=S.ratings[r.course_name]; if(g&&g.n>0) rep++;});
   document.getElementById("mReported").textContent = rep+"/"+total;
-  buildCatFilter(); render(); renderTiers();
+  buildCatFilter(); render(); renderTiers(); renderUpdates();
 }
 function load(){
   Promise.all([
@@ -577,9 +611,129 @@ document.querySelectorAll("#tblLab thead th").forEach(function(th){
   });
 });
 
+
+/* ---------- updates (Sophia change feed) ---------- */
+/* Entries before this date came from the CSV remediation pass — fixing our own
+   bad progress-bar reads, not Sophia changing anything. Showing them as
+   "Sophia changed X" would be false. Move it forward after any bulk re-verify. */
+var CHANGELOG_SINCE = "2026-08-06";
+var FRESH_DAYS = 14;
+/* Fields the feed reports. Add "milestones" here if you want unit exams too. */
+var SHOWN_FIELDS = {challenges:"challenges", touchstones:"touchstones"};
+
+function daysAgo(iso){
+  var t=Date.parse(iso+"T00:00:00Z");
+  return isNaN(t) ? 1e9 : Math.floor((Date.now()-t)/86400000);
+}
+function deltaHtml(e){
+  var o=parseFloat(e.old), n=parseFloat(e.new);
+  var cls=(isNaN(o)||isNaN(n))?"":(n>o?"u-up":(n<o?"u-down":""));
+  var oldTxt=(e.old===""||e.old==null)?"\u2014":e.old;
+  return '<span class="u-delta"><span class="u-old">'+esc(oldTxt)+'</span>'+
+         '<span class="u-arrow">\u2192</span><span class="'+cls+'">'+esc(e.new)+'</span></span>';
+}
+function courseLink(e){
+  var n=esc(e.course);
+  return e.source ? '<a href="'+esc(e.source)+'" target="_blank" rel="noopener nofollow">'+n+'</a>' : n;
+}
+/* course_added entries whose course is not yet a row in the CSV = still to add.
+   Self-clearing: the flag disappears the moment the row is merged. */
+function pendingCourses(log){
+  var have={};
+  S.courses.concat(S.labs).forEach(function(r){
+    if(r.course_name) have[r.course_name.trim().toLowerCase()]=1;
+  });
+  var seen={}, out=[];
+  log.forEach(function(e){
+    if(e.type!=="course_added" || !e.course) return;
+    var k=e.course.trim().toLowerCase();
+    if(have[k] || seen[k]) return;
+    seen[k]=1; out.push(e);
+  });
+  return out;
+}
+function renderUpdates(){
+  var log=S.changelog; if(!log) return;
+  var d=document.getElementById("updates"), btn=document.getElementById("btnUpdates");
+
+  var kept=log.filter(function(e){
+    if(!e.date || e.date < CHANGELOG_SINCE) return false;
+    return e.type==="course_added" || e.type==="course_removed" || SHOWN_FIELDS[e.field];
+  });
+  kept.sort(function(a,b){ return a.date<b.date?1:(a.date>b.date?-1:0); });
+
+  var byDate=[], seen={};
+  kept.forEach(function(e){
+    if(!seen[e.date]){ seen[e.date]={date:e.date,items:[]}; byDate.push(seen[e.date]); }
+    seen[e.date].items.push(e);
+  });
+
+  var todo=pendingCourses(log);
+  var html='<div class="d-head"><h3>What Sophia changed</h3>'+
+    '<div class="ids">checked daily against sophia.org \u00b7 since '+esc(CHANGELOG_SINCE)+'</div></div><div class="u-body">';
+
+  if(todo.length){
+    html+='<div class="u-todo"><b>'+todo.length+' new course'+(todo.length===1?"":"s")+
+          ' on Sophia not yet in the index.</b><ul>';
+    todo.forEach(function(e){
+      html+='<li>'+courseLink(e)+(e.note?' <span class="u-what">'+esc(e.note)+'</span>':'')+'</li>';
+    });
+    html+='</ul></div>';
+  }
+  html+='<p class="u-intro">Changes to challenge and touchstone counts, picked up by the daily '+
+        'verification run. Each entry links to the Sophia page it was read from.</p>';
+
+  if(!byDate.length && !todo.length){
+    html+='<p class="u-empty">No changes recorded yet. The checker runs every morning \u2014 '+
+          'when Sophia edits a course, it shows up here.</p>';
+  }
+  byDate.forEach(function(g){
+    html+='<div class="u-day"><div class="u-date">'+esc(g.date)+'</div>';
+    g.items.forEach(function(e){
+      if(e.type==="course_added" || e.type==="course_removed"){
+        var add=e.type==="course_added";
+        html+='<div class="u-item"><span class="u-tag'+(add?"":" rm")+'">'+(add?"new course":"removed")+
+              '</span><span class="u-course">'+courseLink(e)+
+              (e.note?'<span class="u-what">'+esc(e.note)+'</span>':'')+'</span></div>';
+      } else {
+        html+='<div class="u-item"><span class="u-course">'+courseLink(e)+
+              '<span class="u-what">'+esc(SHOWN_FIELDS[e.field])+'</span></span>'+deltaHtml(e)+'</div>';
+      }
+    });
+    html+='</div>';
+  });
+  html+='</div><div class="u-foot">Counts describe Sophia\u2019s current published course pages. '+
+        'If you are already enrolled, your version may not have been updated. '+
+        'Not affiliated with Sophia Learning.</div>';
+  d.innerHTML=html;
+
+  btn.classList.toggle("todo", todo.length>0);
+  btn.classList.toggle("fresh", kept.some(function(e){return daysAgo(e.date)<=FRESH_DAYS;}));
+}
+function loadUpdates(){
+  return fetch("data/changelog.json").then(function(r){
+    if(!r.ok) throw new Error("no changelog");
+    return r.json();
+  }).then(function(log){
+    if(!Array.isArray(log)) throw new Error("bad changelog");
+    S.changelog=log; renderUpdates();
+  }).catch(function(){
+    S.changelog=null;
+    document.getElementById("updates").innerHTML=
+      '<div class="d-head"><h3>What Sophia changed</h3></div>'+
+      '<div class="u-body"><p class="u-empty">Change history isn\u2019t available right now.</p></div>';
+  });
+}
+document.getElementById("btnUpdates").addEventListener("click",function(){
+  document.getElementById("updates").showModal();
+});
+document.getElementById("updates").addEventListener("click",function(e){
+  if(e.target===this) this.close();
+});
+
 /* boot: wait for PapaParse (deferred), but never hang if the CDN fails */
 var booted=false;
-function boot(){ if(booted) return; booted=true; load(); }
+function boot(){ if(booted) return; booted=true; load(); loadUpdates(); }
 if(window.Papa) boot();
 else {
   var sc=document.querySelector('script[src*="papaparse"]');
