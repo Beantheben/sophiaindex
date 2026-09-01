@@ -1158,5 +1158,26 @@
   "old": "66",
   "new": 67,
   "source": "https://www.sophia.org/online-courses/science/microbiology-lab/"
+ },
+ {
+  "date": "2026-09-01",
+  "course": "Healthcare Career Exploration",
+  "type": "course_added",
+  "note": "6 challenges, 2 milestones, 1 touchstones",
+  "source": "https://www.sophia.org/online-courses/career-success/healthcare-career-exploration/"
+ },
+ {
+  "date": "2026-09-01",
+  "course": "Data Literacy",
+  "type": "course_added",
+  "note": "6 challenges, 2 milestones, 1 touchstones",
+  "source": "https://www.sophia.org/online-courses/computer-science-and-it/data-literacy/"
+ },
+ {
+  "date": "2026-09-01",
+  "course": "Social Psychology",
+  "type": "course_added",
+  "note": "17 challenges, 4 milestones, 3 touchstones",
+  "source": "https://www.sophia.org/online-courses/social-science/social-psychology/"
  }
 ]
