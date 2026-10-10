@@ -1179,5 +1179,13 @@
   "type": "course_added",
   "note": "17 challenges, 4 milestones, 3 touchstones",
   "source": "https://www.sophia.org/online-courses/social-science/social-psychology/"
+ },
+ {
+  "date": "2026-10-10",
+  "course": "Lifespan Development",
+  "field": "touchstones",
+  "old": "0",
+  "new": 1,
+  "source": "https://www.sophia.org/online-courses/social-science/lifespan-development/"
  }
 ]
