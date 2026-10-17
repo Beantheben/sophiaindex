@@ -8,8 +8,7 @@
    "touchstones": 4
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 84
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -25,8 +24,7 @@
    "touchstones": 2
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 46
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -42,8 +40,7 @@
    "touchstones": 2
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 73
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -59,8 +56,7 @@
    "touchstones": 1
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 82
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -76,8 +72,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 87
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -93,8 +88,7 @@
    "touchstones": 3
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 46
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -110,8 +104,7 @@
    "touchstones": 1
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 59
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -127,8 +120,7 @@
    "touchstones": 1
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 89
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -144,8 +136,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 73
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -161,8 +152,7 @@
    "touchstones": 4
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 60
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -178,8 +168,7 @@
    "touchstones": 3
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 61
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -196,8 +185,7 @@
    "touchstones": 2
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 76
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -213,8 +201,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 85
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -230,8 +217,7 @@
    "touchstones": 3
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 17
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -247,8 +233,7 @@
    "touchstones": 1
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 85
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -264,8 +249,7 @@
    "touchstones": 1
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 69
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -281,8 +265,7 @@
    "touchstones": 2
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 84
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -298,8 +281,7 @@
    "touchstones": 3
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 65
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -315,8 +297,7 @@
    "touchstones": 1
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 67
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -332,8 +313,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 83
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -349,13 +329,28 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 1.0,
-   "transfer_partners": 64
+   "credits": 1.0
   },
   "confident": true,
   "ambiguous_fields": [],
   "schema": "standard",
   "evidence": " You must complete 3 Challenges (formative assessments) and 1 Milestone (summative assessment) with an overall score of 70% or better."
+ },
+ "healthcare-career-exploration": {
+  "url": "https://www.sophia.org/online-courses/career-success/healthcare-career-exploration/",
+  "name": "Healthcare Career Exploration",
+  "counts": {
+   "challenges": 6,
+   "milestones": 2,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 1.0
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 6 Challenges (formative assessments), 2 Milestones (summative assessments), and 1 Touchstone (project-based or written assignments) with an overall score of 70% or better."
  },
  "it-career-exploration": {
   "url": "https://www.sophia.org/online-courses/career-success/it-career-exploration/",
@@ -366,8 +361,7 @@
    "touchstones": 1
   },
   "extras": {
-   "credits": 1.0,
-   "transfer_partners": 56
+   "credits": 1.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -383,8 +377,7 @@
    "touchstones": 2
   },
   "extras": {
-   "credits": 1.0,
-   "transfer_partners": 54
+   "credits": 1.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -400,8 +393,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 1.0,
-   "transfer_partners": 59
+   "credits": 1.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -417,8 +409,7 @@
    "milestones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 72
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -434,8 +425,7 @@
    "milestones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 77
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -451,13 +441,28 @@
    "touchstones": 2
   },
   "extras": {
-   "credits": 1.0,
-   "transfer_partners": 25
+   "credits": 1.0
   },
   "confident": true,
   "ambiguous_fields": [],
   "schema": "standard",
   "evidence": " You must complete 4 Challenges (formative assessments), 2 Milestones (summative assessments), and 2 Touchstones (project-based assessments) with an overall score of 70% or better."
+ },
+ "data-literacy": {
+  "url": "https://www.sophia.org/online-courses/computer-science-and-it/data-literacy/",
+  "name": "Data Literacy",
+  "counts": {
+   "challenges": 6,
+   "milestones": 2,
+   "touchstones": 1
+  },
+  "extras": {
+   "credits": 1.0
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 6 Challenges (formative assessments), 2 Milestones (summative assessments), and 1 Touchstone (project-based or written assessment) with an overall score of 70% or better."
  },
  "digital-literacy": {
   "url": "https://www.sophia.org/online-courses/computer-science-and-it/digital-literacy/",
@@ -468,8 +473,7 @@
    "touchstones": 1
   },
   "extras": {
-   "credits": 1.0,
-   "transfer_partners": 11
+   "credits": 1.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -485,8 +489,7 @@
    "touchstones": 1
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 91
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -502,8 +505,7 @@
    "touchstones": 1
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 73
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -520,8 +522,7 @@
    "touchstones": 5
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 67
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -537,8 +538,7 @@
    "touchstones": 1
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 72
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -554,8 +554,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 78
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -572,8 +571,7 @@
    "touchstones": 4
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 78
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -589,8 +587,7 @@
    "milestones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 104
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -606,8 +603,7 @@
    "milestones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 103
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -623,8 +619,7 @@
    "touchstones": 3
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 50
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -640,8 +635,7 @@
    "touchstones": 5
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 105
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -657,8 +651,7 @@
    "touchstones": 1
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 87
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -674,8 +667,7 @@
    "touchstones": 3
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 87
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -692,8 +684,7 @@
    "touchstones": 3
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 89
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -709,8 +700,7 @@
    "touchstones": 3
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 89
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -726,8 +716,7 @@
    "touchstones": 1
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 99
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -743,8 +732,7 @@
    "touchstones": 1
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 91
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -760,8 +748,7 @@
    "touchstones": 2
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 86
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -777,8 +764,7 @@
    "touchstones": 3
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 96
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -794,8 +780,7 @@
    "touchstones": 5
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 72
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -811,8 +796,7 @@
    "touchstones": 5
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 86
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -828,8 +812,7 @@
    "touchstones": 5
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 84
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -845,8 +828,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 4.0,
-   "transfer_partners": 93
+   "credits": 4.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -862,8 +844,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 105
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -879,8 +860,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 2.0,
-   "transfer_partners": 51
+   "credits": 2.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -896,8 +876,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 77
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -913,8 +892,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 103
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -930,8 +908,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 84
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -947,8 +924,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 83
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -965,8 +941,7 @@
    "milestones": 0
   },
   "extras": {
-   "credits": 1.0,
-   "transfer_partners": 66
+   "credits": 1.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -982,8 +957,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 72
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1000,8 +974,7 @@
    "milestones": 0
   },
   "extras": {
-   "credits": 1.0,
-   "transfer_partners": 58
+   "credits": 1.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1017,8 +990,7 @@
    "touchstones": 1
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 95
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1034,8 +1006,7 @@
    "touchstones": 1
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 56
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1051,8 +1022,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 101
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1069,8 +1039,7 @@
    "milestones": 0
   },
   "extras": {
-   "credits": 1.0,
-   "transfer_partners": 68
+   "credits": 1.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1086,8 +1055,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 91
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1104,8 +1072,7 @@
    "milestones": 0
   },
   "extras": {
-   "credits": 1.0,
-   "transfer_partners": 68
+   "credits": 1.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1121,8 +1088,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 86
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1138,8 +1104,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 28
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1156,8 +1121,7 @@
    "touchstones": 2
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 36
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1173,8 +1137,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 83
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1191,8 +1154,7 @@
    "milestones": 0
   },
   "extras": {
-   "credits": 1.0,
-   "transfer_partners": 67
+   "credits": 1.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1208,8 +1170,7 @@
    "touchstones": 2
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 57
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1225,8 +1186,7 @@
    "touchstones": 2
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 63
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1242,8 +1202,7 @@
    "touchstones": 2
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 56
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1259,8 +1218,7 @@
    "touchstones": 2
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 14
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1276,8 +1234,7 @@
    "touchstones": 3
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 105
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1293,8 +1250,7 @@
    "touchstones": 2
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 105
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1307,16 +1263,15 @@
   "counts": {
    "challenges": 20,
    "milestones": 6,
-   "touchstones": 0
+   "touchstones": 1
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 76
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
   "schema": "standard",
-  "evidence": " You must complete 20 Challenges (formative assessments) and 6 Milestones (summative assessments) with an overall score of 70% or better."
+  "evidence": " Students must complete 20 Challenges (formative assessments) and 6 Milestones (summative assessments), 1 Touchstone (writing assignment) with an overall score of 70% or better."
  },
  "macroeconomics": {
   "url": "https://www.sophia.org/online-courses/social-science/macroeconomics/",
@@ -1327,8 +1282,7 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 99
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1344,13 +1298,28 @@
    "touchstones": 0
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 98
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
   "schema": "standard",
   "evidence": " You must complete 12 Challenges (formative assessments) and 4 Milestones (summative assessments) with an overall score of 70% or better."
+ },
+ "social-psychology": {
+  "url": "https://www.sophia.org/online-courses/social-science/social-psychology/",
+  "name": "Social Psychology",
+  "counts": {
+   "challenges": 17,
+   "milestones": 4,
+   "touchstones": 3
+  },
+  "extras": {
+   "credits": 3.0
+  },
+  "confident": true,
+  "ambiguous_fields": [],
+  "schema": "standard",
+  "evidence": " You must complete 17 Challenges (formative assessments), 4 Milestones (summative assessments), and 3 Touchstones (project-based or written assessments) with an overall score of 70% or better."
  },
  "us-government": {
   "url": "https://www.sophia.org/online-courses/social-science/us-government/",
@@ -1361,8 +1330,7 @@
    "touchstones": 2
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 83
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1378,8 +1346,7 @@
    "touchstones": 2
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 100
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
@@ -1395,8 +1362,7 @@
    "touchstones": 2
   },
   "extras": {
-   "credits": 3.0,
-   "transfer_partners": 99
+   "credits": 3.0
   },
   "confident": true,
   "ambiguous_fields": [],
