@@ -1179,5 +1179,27 @@
   "type": "course_added",
   "note": "17 challenges, 4 milestones, 3 touchstones",
   "source": "https://www.sophia.org/online-courses/social-science/social-psychology/"
+ },
+ {
+  "date": "2026-10-31",
+  "course": "Lifespan Development",
+  "field": "touchstones",
+  "old": "0",
+  "new": 1,
+  "source": "https://www.sophia.org/online-courses/social-science/lifespan-development/"
+ },
+ {
+  "date": "2026-10-31",
+  "course": "AI Literacy",
+  "type": "course_added",
+  "note": "3 challenges, 1 milestones, 1 touchstones",
+  "source": "https://www.sophia.org/online-courses/computer-science-and-it/ai-literacy/"
+ },
+ {
+  "date": "2026-10-31",
+  "course": "Your AI-Era Job Search",
+  "type": "course_added",
+  "note": "",
+  "source": "https://www.sophia.org/online-courses/working-with-ai-(non-credit)/your-ai-era-job-search/"
  }
 ]
